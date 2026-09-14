@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EcoRegión | EcoTrámiteCo</title>
+
+    <link rel="icon" type="image/png" href="img/Logotipo.png">
+    <link rel="stylesheet" href="form-user.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-content">
+
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="EcoTramiteCo">
+            </a>
+
+            <a href="index.html" class="back-home">
+                ← Volver
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         CONTENIDO PRINCIPAL
+    ========================== -->
+
+    <main class="form-container">
+
+
+        <!-- =========================
+             INTRODUCCIÓN
+        ========================== -->
+
+        <section class="form-intro">
+
+            <div class="intro-top">
+
+                <div>
+
+                    <span class="eyebrow">
+                        INICIAR RADICACIÓN
+                    </span>
+
+
+                </div>
+
+                <div class="step-counter">
+                    01 <span>/ 03</span>
+                </div>
+
+            </div>
+
+
+            <div class="intro-content">
+
+                <h1>
+                    Información<br>
+                    del usuario.
+                </h1>
+
+                <p>
+                    Proporciona los datos de la persona o entidad
+                    que realizará la solicitud.
+                </p>
+
+            </div>
+
+
+            <!-- =========================
+                 PROGRESO
+            ========================== -->
+
+            <div class="progress">
+
+                <div class="progress-line">
+
+                    <div class="progress-active"></div>
+
+                </div>
+
+
+                <div class="progress-labels">
+
+                    <div class="progress-step active">
+
+                        <span>01</span>
+
+                        <p>
+                            Información
+                        </p>
+
+                    </div>
+
+
+                    <div class="progress-step">
+
+                        <span>02</span>
+
+                        <p>
+                            Proyecto
+                        </p>
+
+                    </div>
+
+
+                    <div class="progress-step">
+
+                        <span>03</span>
+
+                        <p>
+                            Documentación
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FORMULARIO
+        ========================== -->
+
+        <section class="form-section">
+
+            <form id="formularioSolicitante">
+
+
+                <!-- =========================
+                     01. TIPO DE SOLICITANTE
+                ========================== -->
+
+                <div class="form-block">
+
+                    <div class="block-heading">
+
+                        <span class="block-number">
+                            01
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Tipo de solicitante
+                            </h2>
+
+                            <p>
+                                Selecciona el tipo de persona que realizará
+                                la solicitud.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="tipoSolicitante">
+
+                            Tipo de solicitante
+
+                            <span>*</span>
+
+                        </label>
+
+
+                        <select id="tipoSolicitante" name="tipoSolicitante" required>
+
+                            <option value="" selected disabled>
+                                Selecciona una opción
+                            </option>
+
+                            <option value="natural">
+                                Persona Natural
+                            </option>
+
+                            <option value="juridica">
+                                Persona Jurídica
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     02. PERSONA NATURAL
+                ========================== -->
+
+                <div class="form-block conditional-card" id="personaNatural">
+
+                    <div class="block-heading">
+
+                        <span class="block-number">
+                            02
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Datos personales
+                            </h2>
+
+                            <p>
+                                Información de identificación y contacto
+                                del solicitante.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="field-grid">
+
+
+                        <!-- NOMBRES -->
+
+                        <div class="field full-width">
+
+                            <label for="nombres">
+
+                                Nombres y apellidos completos
+
+                                <span>*</span>
+
+                            </label>
+
+                            <input type="text" id="nombres" name="nombres" placeholder="Escribe tu nombre completo">
+
+                        </div>
+
+                        <!-- CORREO -->
+                        
+                        <div class="field">
+                        
+                            <label for="correo">
+                        
+                                Correo de notificación
+                        
+                                <span>*</span>
+                        
+                            </label>
+                        
+                            <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com">
+                        
+                        </div>
+
+                        <!-- TIPO DOCUMENTO -->
+
+                        <div class="field">
+
+                            <label for="tipoDocumento">
+
+                                Tipo de documento
+
+                                <span>*</span>
+
+                            </label>
+
+                            <select id="tipoDocumento" name="tipoDocumento">
+
+                                <option value="" selected disabled>
+                                    Selecciona
+                                </option>
+
+                                <option value="cc">
+                                    Cédula de ciudadanía
+                                </option>
+
+                                <option value="ce">
+                                    Cédula de extranjería
+                                </option>
+
+                                <option value="pasaporte">
+                                    Pasaporte
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- NUMERO DOCUMENTO -->
+
+                        <div class="field">
+
+                            <label for="numeroDocumento">
+
+                                Número de documento
+
+                                <span>*</span>
+
+                            </label>
+
+                            <input type="text" id="numeroDocumento" name="numeroDocumento"
+                                placeholder="Número de documento">
+
+                        </div>
+
+
+                        <!-- CELULAR -->
+
+                        <div class="field">
+
+                            <label for="celular">
+
+                                Teléfono celular
+
+                                <span>*</span>
+
+                            </label>
+
+                            <input type="tel" id="celular" name="celular" placeholder="Número de celular">
+
+                        </div>
+
+
+                        <!-- TELEFONO -->
+
+                        <div class="field">
+
+                            <label for="telefono">
+
+                                Teléfono fijo
+
+                            </label>
+
+                            <input type="tel" id="telefono" name="telefono" placeholder="Número de teléfono">
+
+                        </div>
+
+
+                        <!-- DIRECCION -->
+
+                        <div class="field full-width">
+
+                            <label for="direccion">
+
+                                Dirección de notificación judicial
+
+                                <span>*</span>
+
+                            </label>
+
+                            <input type="text" id="direccion" name="direccion" placeholder="Dirección completa">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     02. PERSONA JURÍDICA
+                ========================== -->
+
+                <div class="form-block conditional-card" id="personaJuridica">
+
+                    <div class="block-heading">
+
+                        <span class="block-number">
+                            02
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Datos de la entidad
+                            </h2>
+
+                            <p>
+                                Información legal y de contacto de la
+                                persona jurídica.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="field-grid">
+
+
+                        <!-- RAZON SOCIAL -->
+
+                        <div class="field full-width">
+
+                            <label for="razonSocial">
+
+                                Razón social o nombre de la entidad
+
+                                <span>*</span>
+
+                            </label>
+
+                            <input type="text" id="razonSocial" name="razonSocial"
+                                placeholder="Nombre completo de la entidad">
+
+                        </div>
+
+
+                        <!-- NIT -->
+
+                        <div class="field">
+
+                            <label for="nit">
+
+                                NIT con dígito de verificación
+
+                                <span>*</span>
+
+                            </label>
+
+                            <input type="text" id="nit" name="nit" placeholder="Ej. 900123456-7">
+
+                        </div>
+
+
+                        <!-- REPRESENTANTE -->
+
+                        <div class="field">
+
+                            <label for="representante">
+
+                                Representante legal
+
+                                <span>*</span>
+
+                            </label>
+
+                            <input type="text" id="representante" name="representante"
+                                placeholder="Nombres y apellidos">
+
+                        </div>
+
+
+                        <!-- CEDULA REPRESENTANTE -->
+
+                        <div class="field">
+
+                            <label for="cedulaRepresentante">
+
+                                Cédula del representante
+
+                                <span>*</span>
+
+                            </label>
+
+                            <input type="text" id="cedulaRepresentante" name="cedulaRepresentante"
+                                placeholder="Número de cédula">
+
+                        </div>
+
+
+                        <!-- CORREO INSTITUCIONAL -->
+
+                        <div class="field">
+
+                            <label for="correoInstitucional">
+
+                                Correo institucional
+
+                                <span>*</span>
+
+                            </label>
+
+                            <input type="email" id="correoInstitucional" name="correoInstitucional"
+                                placeholder="empresa@ejemplo.com">
+
+                        </div>
+
+
+                        <!-- CORREO REPRESENTANTE -->
+
+                        <div class="field">
+
+                            <label for="correoRepresentante">
+
+                                Correo del representante
+
+                                <span>*</span>
+
+                            </label>
+
+                            <input type="email" id="correoRepresentante" name="correoRepresentante"
+                                placeholder="correo@ejemplo.com">
+
+                        </div>
+
+
+                        <!-- TELEFONO EMPRESA -->
+
+                        <div class="field">
+
+                            <label for="telefonoEmpresa">
+
+                                Teléfono de contacto
+
+                                <span>*</span>
+
+                            </label>
+
+                            <input type="tel" id="telefonoEmpresa" name="telefonoEmpresa"
+                                placeholder="Teléfono de la empresa">
+
+                        </div>
+
+
+                        <!-- DIRECCION EMPRESA -->
+
+                        <div class="field full-width">
+
+                            <label for="direccionEmpresa">
+
+                                Dirección de notificación judicial
+
+                                <span>*</span>
+
+                            </label>
+
+                            <input type="text" id="direccionEmpresa" name="direccionEmpresa"
+                                placeholder="Dirección completa">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     03. REPRESENTACIÓN
+                ========================== -->
+
+                <div class="form-block">
+
+                    <div class="block-heading">
+
+                        <span class="block-number">
+                            03
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Representación
+                            </h2>
+
+                            <p>
+                                Indica si actúas mediante un apoderado.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="tieneApoderado">
+
+                            ¿Actúa mediante apoderado?
+
+                            <span>*</span>
+
+                        </label>
+
+
+                        <select id="tieneApoderado" name="tieneApoderado" required>
+
+                            <option value="" selected disabled>
+                                Selecciona una opción
+                            </option>
+
+                            <option value="no">
+                                No
+                            </option>
+
+                            <option value="si">
+                                Sí
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     04. DATOS DEL APODERADO
+                ========================== -->
+
+                <div class="form-block conditional-card" id="datosApoderado">
+
+                    <div class="block-heading">
+
+                        <span class="block-number">
+                            04
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Datos del apoderado
+                            </h2>
+
+                            <p>
+                                Información de la persona que representa
+                                al solicitante.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="field-grid">
+
+
+                        <!-- NOMBRE APODERADO -->
+
+                        <div class="field">
+
+                            <label for="nombreApoderado">
+
+                                Nombre completo
+
+                                <span>*</span>
+
+                            </label>
+
+                            <input type="text" id="nombreApoderado" name="nombreApoderado"
+                                placeholder="Nombres y apellidos">
+
+                        </div>
+
+
+                        <!-- CEDULA APODERADO -->
+
+                        <div class="field">
+
+                            <label for="cedulaApoderado">
+
+                                Cédula de ciudadanía
+
+                                <span>*</span>
+
+                            </label>
+
+                            <input type="text" id="cedulaApoderado" name="cedulaApoderado"
+                                placeholder="Número de cédula">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     05. DOCUMENTOS
+                ========================== -->
+
+                <div class="form-block">
+
+                    <div class="block-heading">
+
+                        <span class="block-number">
+                            05
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Documentos de identificación
+                            </h2>
+
+                            <p>
+                                Adjunta los documentos requeridos para
+                                tu solicitud.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="upload-list">
+
+
+                        <!-- DOCUMENTO IDENTIDAD -->
+
+                        <label class="upload-row" for="documentoIdentidad">
+
+                            <div class="upload-symbol">
+                                ↑
+                            </div>
+
+                            <div class="upload-info">
+
+                                <strong>
+                                    Documento de identidad
+                                </strong>
+
+                                <span>
+                                    Persona natural · PDF, JPG o PNG
+                                </span>
+
+                            </div>
+
+                            <span class="upload-action">
+                                Adjuntar
+                            </span>
+
+                            <input type="file" id="documentoIdentidad" name="documentoIdentidad"
+                                accept=".pdf,.jpg,.jpeg,.png">
+
+                        </label>
+
+
+                        <!-- CERTIFICADO -->
+
+                        <label class="upload-row" for="certificado">
+
+                            <div class="upload-symbol">
+                                ↑
+                            </div>
+
+                            <div class="upload-info">
+
+                                <strong>
+                                    Certificado de existencia y representación
+                                </strong>
+
+                                <span>
+                                    Persona jurídica · PDF
+                                </span>
+
+                            </div>
+
+                            <span class="upload-action">
+                                Adjuntar
+                            </span>
+
+                            <input type="file" id="certificado" name="certificado" accept=".pdf">
+
+                        </label>
+
+
+                        <!-- PODER -->
+
+                        <label class="upload-row" for="poder">
+
+                            <div class="upload-symbol">
+                                ↑
+                            </div>
+
+                            <div class="upload-info">
+
+                                <strong>
+                                    Poder debidamente otorgado
+                                </strong>
+
+                                <span>
+                                    Si actúa mediante apoderado · PDF
+                                </span>
+
+                            </div>
+
+                            <span class="upload-action">
+                                Adjuntar
+                            </span>
+
+                            <input type="file" id="poder" name="poder" accept=".pdf">
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     HABEAS DATA
+                ========================== -->
+
+                <div class="data-permission">
+
+                    <div class="permission-icon">
+                        ✓
+                    </div>
+
+
+                    <div class="permission-content">
+
+                        <h2>
+                            Tratamiento de datos personales
+                        </h2>
+
+                        <p>
+                            Autorizo el tratamiento de mis datos personales
+                            de acuerdo con la política de tratamiento de datos
+                            de la entidad y para las finalidades relacionadas
+                            con el trámite solicitado.
+                        </p>
+
+
+                        <label class="checkbox-container">
+
+                            <input type="checkbox" id="habeasData" name="habeasData" required>
+
+                            <span>
+                                Acepto la autorización de tratamiento de datos.
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     BOTONES
+                ========================== -->
+
+                <div class="form-actions">
+
+                    <a href="index.html" class="secondary-button">
+                        ← Volver
+                    </a>
+
+
+                    <button type="submit" class="primary-button">
+                        Continuar
+
+                        <span>
+                            →
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <span>
+                EcoRegión SAS
+            </span>
+
+            <span>
+                Proyecto académico · 2026
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+<script>
+
+    // =====================================
+    // ELEMENTOS
+    // =====================================
+
+    const tipoSolicitante = document.getElementById("tipoSolicitante");
+    const personaNatural  = document.getElementById("personaNatural");
+    const personaJuridica = document.getElementById("personaJuridica");
+    const tieneApoderado  = document.getElementById("tieneApoderado");
+    const datosApoderado  = document.getElementById("datosApoderado");
+    const formulario      = document.getElementById("formularioSolicitante");
+
+
+    // =====================================
+    // OCULTAR CAMPOS CONDICIONALES
+    // =====================================
+
+    personaNatural.style.display = "none";
+    personaJuridica.style.display = "none";
+    datosApoderado.style.display = "none";
+
+
+    // =====================================
+    // MOSTRAR / OCULTAR SEGÚN EL TIPO
+    // =====================================
+
+    function actualizarCamposCondicionales() {
+
+        personaNatural.style.display = "none";
+        personaJuridica.style.display = "none";
+        datosApoderado.style.display = "none";
+
+        if (tipoSolicitante.value === "natural") {
+            personaNatural.style.display = "block";
+        }
+
+        if (tipoSolicitante.value === "juridica") {
+            personaJuridica.style.display = "block";
+        }
+
+        if (tieneApoderado.value === "si") {
+            datosApoderado.style.display = "block";
+        }
+
+    }
+
+    tipoSolicitante.addEventListener("change", actualizarCamposCondicionales);
+    tieneApoderado.addEventListener("change", actualizarCamposCondicionales);
+
+
+    // =====================================
+    // AUTORRELLENO DE CAMPOS AL CARGAR
+    // =====================================
+
+    function restaurarCampos() {
+
+        document.querySelectorAll("input, select, textarea").forEach(function (el) {
+
+            if (!el.name) return;
+            if (el.type === "file") return;
+
+            const valor = sessionStorage.getItem(el.name);
+            if (valor === null) return;
+
+            if (el.type === "checkbox") {
+                el.checked = (valor === "true");
+            } else {
+                el.value = valor;
+            }
+
+        });
+
+        actualizarCamposCondicionales();
+        restaurarArchivosVisuales();
+
+    }
+
+
+    // =====================================
+    // RESTAURAR ESTADO VISUAL DE ARCHIVOS
+    // (solo el nombre, el archivo real no se puede guardar)
+    // =====================================
+
+    function restaurarArchivosVisuales() {
+
+        document.querySelectorAll('input[type="file"]').forEach(function (input) {
+
+            if (!input.name) return;
+
+            const nombreGuardado = sessionStorage.getItem(input.name + "_nombre");
+            if (!nombreGuardado) return;
+
+            const row = input.closest(".upload-row");
+            if (!row) return;
+
+            const symbol = row.querySelector(".upload-symbol");
+            const action = row.querySelector(".upload-action");
+            const info   = row.querySelector(".upload-info");
+
+            const previo = info.querySelector(".file-name");
+            if (previo) previo.remove();
+
+            row.classList.add("has-file");
+            if (symbol) symbol.textContent = "✓";
+            if (action) action.textContent = "Cambiar";
+
+            const chip = document.createElement("span");
+            chip.className = "file-name";
+            chip.textContent = nombreGuardado;
+            info.appendChild(chip);
+
+        });
+
+    }
+
+
+    // =====================================
+    // AUTOGUARDADO
+    // =====================================
+
+    function guardarCampo(event) {
+
+        const el = event.target;
+        if (!el.name) return;
+        if (el.type === "file") return;
+
+        if (el.type === "checkbox") {
+            sessionStorage.setItem(el.name, el.checked);
+        } else {
+            sessionStorage.setItem(el.name, el.value);
+        }
+
+    }
+
+    document.querySelectorAll("input, select, textarea").forEach(function (el) {
+
+        if (el.type === "file") return;
+
+        el.addEventListener("input", guardarCampo);
+        el.addEventListener("change", guardarCampo);
+        el.addEventListener("blur", guardarCampo);
+
+    });
+
+
+    // =====================================
+    // VALIDACIÓN SUAVE
+    // =====================================
+
+    function validarFormulario() {
+
+        let valido = true;
+        let primeroInvalido = null;
+
+        document.querySelectorAll("[required]").forEach(function (el) {
+
+            const contenedorOculto = el.closest(".conditional-card");
+            if (contenedorOculto && contenedorOculto.style.display === "none") {
+                return;
+            }
+
+            el.style.borderColor = "";
+
+            let vacio = false;
+
+            if (el.type === "checkbox") {
+                vacio = !el.checked;
+            } else if (el.type === "file") {
+                vacio = false;
+            } else {
+                vacio = (el.value.trim() === "");
+            }
+
+            if (vacio) {
+                el.style.borderColor = "#c65a5a";
+                valido = false;
+                if (!primeroInvalido) primeroInvalido = el;
+            }
+
+        });
+
+        if (!valido && primeroInvalido) {
+            primeroInvalido.scrollIntoView({ behavior: "smooth", block: "center" });
+            primeroInvalido.focus();
+        }
+
+        return valido;
+
+    }
+
+    document.querySelectorAll("[required]").forEach(function (el) {
+
+        el.addEventListener("input", function () {
+            el.style.borderColor = "";
+        });
+
+        el.addEventListener("change", function () {
+            el.style.borderColor = "";
+        });
+
+    });
+
+
+    // =====================================
+    // ENVÍO DEL FORMULARIO
+    // =====================================
+
+    formulario.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        if (!validarFormulario()) {
+            return;
+        }
+
+        const datos = new FormData(formulario);
+
+        datos.forEach(function (valor, nombre) {
+            if (typeof valor === "string") {
+                sessionStorage.setItem(nombre, valor);
+            }
+        });
+
+        sessionStorage.setItem("tipoSolicitante", tipoSolicitante.value);
+        sessionStorage.setItem(
+            "habeasData",
+            document.getElementById("habeasData").checked
+        );
+
+        window.location.href = "form-proy.html";
+
+    });
+
+
+    // =====================================
+    // FEEDBACK VISUAL DE ARCHIVOS
+    // + GUARDAR SOLO EL NOMBRE
+    // =====================================
+
+    document.querySelectorAll('input[type="file"]').forEach(function (input) {
+
+        input.addEventListener("change", function () {
+
+            const row = input.closest(".upload-row");
+            if (!row) return;
+
+            const symbol = row.querySelector(".upload-symbol");
+            const action = row.querySelector(".upload-action");
+            const info   = row.querySelector(".upload-info");
+
+            const previo = info.querySelector(".file-name");
+            if (previo) previo.remove();
+
+            if (input.files && input.files.length > 0) {
+
+                const archivo = input.files[0];
+
+                row.classList.add("has-file");
+                if (symbol) symbol.textContent = "✓";
+                if (action) action.textContent = "Cambiar";
+
+                const chip = document.createElement("span");
+                chip.className = "file-name";
+                chip.textContent = archivo.name;
+                info.appendChild(chip);
+
+                if (input.name) {
+                    sessionStorage.setItem(input.name + "_nombre", archivo.name);
+                }
+
+            } else {
+
+                row.classList.remove("has-file");
+                if (symbol) symbol.textContent = "↑";
+                if (action) action.textContent = "Adjuntar";
+
+                if (input.name) {
+                    sessionStorage.removeItem(input.name + "_nombre");
+                }
+
+            }
+
+        });
+
+    });
+
+
+    // =====================================
+    // INICIALIZAR
+    // =====================================
+
+    restaurarCampos();
+
+</script>
+
+</body>
+
+</html>

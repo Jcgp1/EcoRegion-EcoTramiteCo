@@ -1,0 +1,422 @@
+/* =========================================
+   VARIABLES
+========================================= */
+
+:root {
+    --green: #356b55;
+    --green-dark: #244b3b;
+    --green-soft: #edf4ef;
+    --cream: #fbfaf7;
+    --white: #ffffff;
+    --dark: #1f2b25;
+    --text: #68736d;
+    --text-light: #929b96;
+    --border: #dfe7e2;
+    --container: 1120px;
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.navbar {
+    height: 78px;
+    background: var(--green-dark);
+    border-bottom: 1px solid var(--green-dark);
+}
+
+.navbar-content {
+    width: min(100% - 48px, var(--container));
+    height: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 145px;
+    height: auto;
+    display: block;
+}
+
+
+/* =========================================
+   CONTENEDOR
+========================================= */
+
+.thank-you-container {
+    width: min(100% - 48px, var(--container));
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   SECCIÓN PRINCIPAL
+========================================= */
+
+.thank-you {
+    padding: 76px 0 75px;
+}
+
+
+/* =========================================
+   PARTE SUPERIOR
+========================================= */
+
+.top-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 58px;
+}
+
+.eyebrow {
+    color: var(--green);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+.step-counter {
+    color: var(--text-light);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   MENSAJE
+========================================= */
+
+.thank-you-content {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 10px;
+
+    padding-bottom: 70px;
+
+    border-bottom: 2px solid var(--green);
+}
+
+.number {
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding-top: 8px;
+}
+
+.message h1 {
+    color: var(--dark);
+    font-size: clamp(52px, 7vw, 88px);
+    font-weight: 400;
+    line-height: 0.98;
+    letter-spacing: -4px;
+
+    margin-bottom: 32px;
+}
+
+.message p {
+    max-width: 600px;
+
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+
+/* =========================================
+   ENCUESTA
+========================================= */
+
+.survey {
+    margin-top: 55px;
+    padding: 38px 40px;
+
+    background: var(--green-soft);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+.survey-text {
+    max-width: 650px;
+}
+
+.survey-label {
+    display: block;
+
+    color: var(--green);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+
+    margin-bottom: 10px;
+}
+
+.survey h2 {
+    color: var(--dark);
+
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: -0.6px;
+
+    margin-bottom: 7px;
+}
+
+.survey p {
+    color: var(--text);
+
+    font-size: 13px;
+    line-height: 1.65;
+
+    margin-bottom: 12px;
+}
+
+.survey-time {
+    color: var(--text-light);
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   BOTÓN ENCUESTA
+========================================= */
+
+.survey-button {
+    min-height: 48px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    padding: 0 20px;
+
+    background: var(--green-dark);
+    border: 1px solid var(--green-dark);
+    border-radius: 5px;
+
+    color: var(--white);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.survey-button:hover {
+    background: var(--green);
+    border-color: var(--green);
+}
+
+.survey-button span {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+
+/* =========================================
+   ACCIONES
+========================================= */
+
+.actions {
+    display: flex;
+    align-items: center;
+
+    padding-top: 38px;
+}
+
+.secondary-button {
+    min-height: 48px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 19px;
+
+    border: 1px solid var(--border);
+    border-radius: 5px;
+
+    background: transparent;
+
+    color: var(--text);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.secondary-button:hover {
+    color: var(--dark);
+    border-color: #c8d3cd;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background: var(--green-dark);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-content {
+    width: min(100% - 48px, var(--container));
+    min-height: 90px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 11px;
+}
+
+.footer-content span:first-child {
+    color: var(--white);
+    font-weight: 600;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 750px) {
+
+    .navbar-content,
+    .thank-you-container,
+    .footer-content {
+        width: min(100% - 32px, var(--container));
+    }
+
+    .thank-you {
+        padding: 55px 0 55px;
+    }
+
+    .top-info {
+        margin-bottom: 45px;
+    }
+
+    .thank-you-content {
+        grid-template-columns: 45px 1fr;
+        padding-bottom: 55px;
+    }
+
+    .message h1 {
+        font-size: 56px;
+        letter-spacing: -3px;
+    }
+
+    .survey {
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding: 30px;
+    }
+
+    .survey-button {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .navbar {
+        height: 70px;
+    }
+
+    .logo img {
+        width: 125px;
+    }
+
+    .message h1 {
+        font-size: 45px;
+        letter-spacing: -2.5px;
+    }
+
+    .message p {
+        font-size: 14px;
+    }
+
+    .survey {
+        margin-top: 40px;
+        padding: 25px;
+    }
+
+    .survey h2 {
+        font-size: 22px;
+    }
+
+    .survey p {
+        font-size: 12px;
+    }
+
+    .secondary-button,
+    .survey-button {
+        min-height: 45px;
+        font-size: 11px;
+    }
+
+    .footer-content {
+        min-height: 80px;
+
+        gap: 15px;
+
+        flex-direction: column;
+        justify-content: center;
+    }
+}

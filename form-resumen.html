@@ -1,0 +1,1967 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Revisión · EcoTrámiteCo</title>
+
+    <link rel="icon" type="image/png" href="img/Logotipo.png">
+    <link rel="stylesheet" href="form-resumen.css">
+    <script src="js/docx.umd.js"></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="navbar">
+        <div class="navbar-content">
+
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="EcoTrámiteCo">
+            </a>
+
+            <a href="form-doc.html" class="back-home">
+                ← Volver
+            </a>
+
+        </div>
+    </header>
+
+
+    <!-- CONTENIDO -->
+    <main class="form-container">
+
+        <!-- INTRO -->
+        <section class="form-intro">
+
+            <div class="intro-top">
+
+                <span class="eyebrow">
+                    REVISIÓN FINAL
+                </span>
+
+            </div>
+
+            <h1>
+                Revisa tu<br>
+                información.
+            </h1>
+
+            <p>
+                Verifica que todos los datos estén correctos. Puedes
+                editar cualquier campo directamente aquí. Cuando termines,
+                genera el documento para descargarlo.
+            </p>
+
+
+            <!-- AVISO -->
+            <div class="review-note">
+
+                <span class="review-note-icon">i</span>
+
+                <div>
+
+                    <strong>
+                        Antes de generar el documento
+                    </strong>
+
+                    <p>
+                        Revisa cada sección. Los archivos ya indicados aparecen
+                        con su nombre; si quieres reemplazarlos, puedes hacerlo.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- RESUMEN -->
+            <div class="application-summary">
+
+                <div>
+                    <span>Autoridad ambiental</span>
+                    <strong id="authoritySummary">—</strong>
+                </div>
+
+                <div>
+                    <span>Tipo de solicitante</span>
+                    <strong id="applicantSummary">—</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FORMULARIO / ACORDEONES -->
+        <section class="form-section">
+
+            <form id="reviewForm">
+
+
+                <!-- =====================================
+                     ACORDEÓN 01 · SOLICITANTE
+                ====================================== -->
+
+                <div class="accordion">
+
+                    <input type="checkbox" id="acc1" class="accordion-toggle" checked>
+
+                    <label for="acc1" class="accordion-header">
+
+                        <span class="accordion-number">01</span>
+
+                        <span class="accordion-title">
+                            Solicitante
+                        </span>
+
+                        <span class="accordion-arrow">▾</span>
+
+                    </label>
+
+
+                    <div class="accordion-body">
+
+                        <!-- TIPO DE SOLICITANTE -->
+
+                        <div class="field">
+
+                            <label for="tipoSolicitante">
+                                Tipo de solicitante
+                            </label>
+
+                            <select id="tipoSolicitante" name="tipoSolicitante">
+                                <option value="" disabled>Selecciona</option>
+                                <option value="natural">Persona Natural</option>
+                                <option value="juridica">Persona Jurídica</option>
+                            </select>
+
+                        </div>
+
+
+                        <!-- BLOQUE NATURAL -->
+
+                        <div class="review-subblock" id="blockNatural" style="display:none;">
+
+                            <div class="field-grid">
+
+                                <div class="field full-width">
+                                    <label for="nombres">Nombres y apellidos completos</label>
+                                    <input type="text" id="nombres" name="nombres">
+                                </div>
+
+                                <div class="field">
+                                    <label for="correo">Correo de notificación</label>
+                                    <input type="email" id="correo" name="correo">
+                                </div>
+
+                                <div class="field">
+                                    <label for="tipoDocumento">Tipo de documento</label>
+                                    <select id="tipoDocumento" name="tipoDocumento">
+                                        <option value="" disabled>Selecciona</option>
+                                        <option value="cc">Cédula de ciudadanía</option>
+                                        <option value="ce">Cédula de extranjería</option>
+                                        <option value="pasaporte">Pasaporte</option>
+                                    </select>
+                                </div>
+
+                                <div class="field">
+                                    <label for="numeroDocumento">Número de documento</label>
+                                    <input type="text" id="numeroDocumento" name="numeroDocumento">
+                                </div>
+
+                                <div class="field">
+                                    <label for="celular">Teléfono celular</label>
+                                    <input type="tel" id="celular" name="celular">
+                                </div>
+
+                                <div class="field">
+                                    <label for="telefono">Teléfono fijo</label>
+                                    <input type="tel" id="telefono" name="telefono">
+                                </div>
+
+                                <div class="field full-width">
+                                    <label for="direccion">Dirección de notificación judicial</label>
+                                    <input type="text" id="direccion" name="direccion">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- BLOQUE JURÍDICA -->
+
+                        <div class="review-subblock" id="blockJuridica" style="display:none;">
+
+                            <div class="field-grid">
+
+                                <div class="field full-width">
+                                    <label for="razonSocial">Razón social o nombre de la entidad</label>
+                                    <input type="text" id="razonSocial" name="razonSocial">
+                                </div>
+
+                                <div class="field">
+                                    <label for="nit">NIT con dígito de verificación</label>
+                                    <input type="text" id="nit" name="nit">
+                                </div>
+
+                                <div class="field">
+                                    <label for="representante">Representante legal</label>
+                                    <input type="text" id="representante" name="representante">
+                                </div>
+
+                                <div class="field">
+                                    <label for="cedulaRepresentante">Cédula del representante</label>
+                                    <input type="text" id="cedulaRepresentante" name="cedulaRepresentante">
+                                </div>
+
+                                <div class="field">
+                                    <label for="correoInstitucional">Correo institucional</label>
+                                    <input type="email" id="correoInstitucional" name="correoInstitucional">
+                                </div>
+
+                                <div class="field">
+                                    <label for="correoRepresentante">Correo del representante</label>
+                                    <input type="email" id="correoRepresentante" name="correoRepresentante">
+                                </div>
+
+                                <div class="field">
+                                    <label for="telefonoEmpresa">Teléfono de contacto</label>
+                                    <input type="tel" id="telefonoEmpresa" name="telefonoEmpresa">
+                                </div>
+
+                                <div class="field full-width">
+                                    <label for="direccionEmpresa">Dirección de notificación judicial</label>
+                                    <input type="text" id="direccionEmpresa" name="direccionEmpresa">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- APODERADO -->
+
+                        <div class="field">
+                            <label for="tieneApoderado">¿Actúa mediante apoderado?</label>
+                            <select id="tieneApoderado" name="tieneApoderado">
+                                <option value="" disabled>Selecciona</option>
+                                <option value="no">No</option>
+                                <option value="si">Sí</option>
+                            </select>
+                        </div>
+
+                        <div class="review-subblock" id="blockApoderado" style="display:none;">
+
+                            <div class="field-grid">
+
+                                <div class="field">
+                                    <label for="nombreApoderado">Nombre completo del apoderado</label>
+                                    <input type="text" id="nombreApoderado" name="nombreApoderado">
+                                </div>
+
+                                <div class="field">
+                                    <label for="cedulaApoderado">Cédula del apoderado</label>
+                                    <input type="text" id="cedulaApoderado" name="cedulaApoderado">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- DOCUMENTOS DEL SOLICITANTE -->
+
+                        <h3 class="review-subtitle">
+                            Documentos del solicitante
+                        </h3>
+
+                        <div class="upload-list">
+
+                            <label class="upload-row" for="documentoIdentidad">
+                                <div class="upload-symbol">↑</div>
+                                <div class="upload-info">
+                                    <strong>Documento de identidad</strong>
+                                    <span>Persona natural · PDF, JPG o PNG</span>
+                                </div>
+                                <span class="upload-action">Adjuntar</span>
+                                <input type="file" id="documentoIdentidad" name="documentoIdentidad" accept=".pdf,.jpg,.jpeg,.png">
+                            </label>
+
+                            <label class="upload-row" for="certificado">
+                                <div class="upload-symbol">↑</div>
+                                <div class="upload-info">
+                                    <strong>Certificado de existencia y representación</strong>
+                                    <span>Persona jurídica · PDF</span>
+                                </div>
+                                <span class="upload-action">Adjuntar</span>
+                                <input type="file" id="certificado" name="certificado" accept=".pdf">
+                            </label>
+
+                            <label class="upload-row" for="poder">
+                                <div class="upload-symbol">↑</div>
+                                <div class="upload-info">
+                                    <strong>Poder debidamente otorgado</strong>
+                                    <span>Si actúa mediante apoderado · PDF</span>
+                                </div>
+                                <span class="upload-action">Adjuntar</span>
+                                <input type="file" id="poder" name="poder" accept=".pdf">
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =====================================
+                     ACORDEÓN 02 · PROYECTO
+                ====================================== -->
+
+                <div class="accordion">
+
+                    <input type="checkbox" id="acc2" class="accordion-toggle">
+
+                    <label for="acc2" class="accordion-header">
+
+                        <span class="accordion-number">02</span>
+
+                        <span class="accordion-title">
+                            Proyecto
+                        </span>
+
+                        <span class="accordion-arrow">▾</span>
+
+                    </label>
+
+
+                    <div class="accordion-body">
+
+                        <!-- LOCALIZACIÓN -->
+
+                        <h3 class="review-subtitle">Localización y jurisdicción</h3>
+
+                        <div class="field">
+                            <label for="autoridad">Autoridad ambiental competente</label>
+                            <select id="autoridad" name="autoridad">
+                                <option value="" disabled>Selecciona</option>
+                                <option value="CAR Cundinamarca">CAR Cundinamarca</option>
+                                <option value="SDA">Secretaría Distrital de Ambiente — SDA</option>
+                                <option value="Corpoboyaca">Corpoboyacá</option>
+                            </select>
+                        </div>
+
+                        <div class="field-grid">
+
+                            <div class="field">
+                                <label for="departamento">Departamento</label>
+                                <input type="text" id="departamento" name="departamento">
+                            </div>
+
+                            <div class="field">
+                                <label for="municipio">Municipio / Localidad</label>
+                                <input type="text" id="municipio" name="municipio">
+                            </div>
+
+                        </div>
+
+                        <div class="field-grid">
+
+                            <div class="field">
+                                <label for="vereda">Vereda / Corregimiento</label>
+                                <input type="text" id="vereda" name="vereda">
+                            </div>
+
+                            <div class="field">
+                                <label for="cuerpoAgua">Nombre del cuerpo de agua</label>
+                                <input type="text" id="cuerpoAgua" name="cuerpoAgua">
+                            </div>
+
+                        </div>
+
+                        <div class="field">
+                            <label for="nombreProyecto">Nombre del predio / proyecto</label>
+                            <input type="text" id="nombreProyecto" name="nombreProyecto">
+                        </div>
+
+
+                        <!-- PREDIO -->
+
+                        <h3 class="review-subtitle">Identificación del predio</h3>
+
+                        <div class="field">
+                            <label for="cedulaCatastral">Cédula catastral / Folio de matrícula</label>
+                            <input type="text" id="cedulaCatastral" name="cedulaCatastral">
+                        </div>
+
+                        <div class="field">
+                            <label for="propietario">Propietario del predio</label>
+                            <input type="text" id="propietario" name="propietario">
+                        </div>
+
+
+                        <!-- ESPECIFICACIONES -->
+
+                        <h3 class="review-subtitle">Especificaciones técnicas</h3>
+
+                        <div class="field">
+                            <label for="tipoOcupacion">Tipo de ocupación</label>
+                            <select id="tipoOcupacion" name="tipoOcupacion">
+                                <option value="" disabled>Selecciona</option>
+                                <option value="Permanente">Permanente</option>
+                                <option value="Transitoria">Transitoria</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="tiempoOcupacion">Tiempo de ocupación</label>
+                            <input type="text" id="tiempoOcupacion" name="tiempoOcupacion">
+                        </div>
+
+                        <div class="field">
+                            <label for="tipoActividad">Tipo de actividad a realizar</label>
+                            <textarea id="tipoActividad" name="tipoActividad"></textarea>
+                        </div>
+
+                        <div class="field">
+                            <label for="obrasRonda">Obras que ocupan la ronda hídrica</label>
+                            <textarea id="obrasRonda" name="obrasRonda"></textarea>
+                        </div>
+
+                        <div class="field-grid">
+
+                            <div class="field">
+                                <label for="norte">Norte</label>
+                                <input type="text" id="norte" name="norte">
+                            </div>
+
+                            <div class="field">
+                                <label for="este">Este</label>
+                                <input type="text" id="este" name="este">
+                            </div>
+
+                        </div>
+
+                        <div class="field-grid three-columns">
+
+                            <div class="field">
+                                <label for="altitud">Altitud (msnm)</label>
+                                <input type="number" id="altitud" name="altitud" step="any">
+                            </div>
+
+                            <div class="field">
+                                <label for="areaOcupacion">Área de ocupación (m²)</label>
+                                <input type="number" id="areaOcupacion" name="areaOcupacion" step="any">
+                            </div>
+
+                            <div class="field">
+                                <label for="longitudObra">Longitud de la obra (m)</label>
+                                <input type="number" id="longitudObra" name="longitudObra" step="any">
+                            </div>
+
+                        </div>
+
+                        <div class="field-grid">
+
+                            <div class="field">
+                                <label for="anchoObra">Ancho de la obra (m)</label>
+                                <input type="number" id="anchoObra" name="anchoObra" step="any">
+                            </div>
+
+                            <div class="field">
+                                <label for="alturaCauce">Altura sobre el cauce (m)</label>
+                                <input type="number" id="alturaCauce" name="alturaCauce" step="any">
+                            </div>
+
+                        </div>
+
+                        <div class="field">
+                            <label for="cimentacion">Tipo de cimentación</label>
+                            <input type="text" id="cimentacion" name="cimentacion">
+                        </div>
+
+
+                        <!-- HIDROLOGÍA -->
+
+                        <h3 class="review-subtitle">Aspectos hidrológicos e hidráulicos</h3>
+
+                        <div class="field">
+                            <label for="analisisHidrologico">Análisis hidrológico</label>
+                            <textarea id="analisisHidrologico" name="analisisHidrologico"></textarea>
+                        </div>
+
+                        <div class="field">
+                            <label for="analisisHidraulico">Análisis hidráulico</label>
+                            <textarea id="analisisHidraulico" name="analisisHidraulico"></textarea>
+                        </div>
+
+                        <div class="field">
+                            <label for="estudioSocavacion">Estudio de socavación</label>
+                            <textarea id="estudioSocavacion" name="estudioSocavacion"></textarea>
+                        </div>
+
+                        <div class="field-grid">
+
+                            <div class="field">
+                                <label for="caudalDiseno">Caudal de diseño (m³/s)</label>
+                                <input type="number" id="caudalDiseno" name="caudalDiseno" step="any">
+                            </div>
+
+                            <div class="field">
+                                <label for="periodoRetorno">Periodo de retorno (años)</label>
+                                <select id="periodoRetorno" name="periodoRetorno">
+                                    <option value="" disabled>Selecciona</option>
+                                    <option value="2.33">2,33 años</option>
+                                    <option value="10">10 años</option>
+                                    <option value="25">25 años</option>
+                                    <option value="50">50 años</option>
+                                    <option value="100">100 años</option>
+                                    <option value="500">500 años</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="field">
+                            <label for="name">NAME — Nivel de Aguas Máximas Extraordinarias</label>
+                            <input type="text" id="name" name="name">
+                        </div>
+
+                        <div class="field">
+                            <label for="seccionesCauce">Sección o secciones características del cauce</label>
+                            <textarea id="seccionesCauce" name="seccionesCauce"></textarea>
+                        </div>
+
+                        <div class="field">
+                            <label for="condicionesGeomorfologicas">Condiciones geomorfológicas</label>
+                            <textarea id="condicionesGeomorfologicas" name="condicionesGeomorfologicas"></textarea>
+                        </div>
+
+
+                        <!-- DESCRIPCIÓN -->
+
+                        <h3 class="review-subtitle">Descripción del proyecto</h3>
+
+                        <div class="field">
+                            <label for="descripcionProyecto">Descripción detallada del proyecto</label>
+                            <textarea id="descripcionProyecto" name="descripcionProyecto"></textarea>
+                        </div>
+
+                        <div class="field">
+                            <label for="justificacion">Justificación técnica</label>
+                            <textarea id="justificacion" name="justificacion"></textarea>
+                        </div>
+
+                        <div class="field">
+                            <label for="objetivos">Objetivos del proyecto</label>
+                            <textarea id="objetivos" name="objetivos"></textarea>
+                        </div>
+
+                        <div class="field">
+                            <label for="beneficios">Beneficios esperados</label>
+                            <textarea id="beneficios" name="beneficios"></textarea>
+                        </div>
+
+
+                        <!-- GESTIÓN AMBIENTAL -->
+
+                        <h3 class="review-subtitle">Información de gestión ambiental</h3>
+
+                        <div class="field">
+                            <label for="medidasManejo">Medidas de manejo ambiental</label>
+                            <textarea id="medidasManejo" name="medidasManejo"></textarea>
+                        </div>
+
+                        <div class="field">
+                            <label for="sistemaOcupacion">Sistema a emplear en la ocupación</label>
+                            <textarea id="sistemaOcupacion" name="sistemaOcupacion"></textarea>
+                        </div>
+
+                        <div class="field">
+                            <label for="planRiesgo">Plan de gestión del riesgo</label>
+                            <textarea id="planRiesgo" name="planRiesgo"></textarea>
+                        </div>
+
+                        <div class="field">
+                            <label for="gestionResiduos">Gestión de residuos</label>
+                            <textarea id="gestionResiduos" name="gestionResiduos"></textarea>
+                        </div>
+
+                        <div class="field">
+                            <label for="cronograma">Cronograma de obras</label>
+                            <textarea id="cronograma" name="cronograma"></textarea>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =====================================
+                     ACORDEÓN 03 · DOCUMENTOS DEL PROYECTO
+                ====================================== -->
+
+                <div class="accordion">
+
+                    <input type="checkbox" id="acc3" class="accordion-toggle">
+
+                    <label for="acc3" class="accordion-header">
+
+                        <span class="accordion-number">03</span>
+
+                        <span class="accordion-title">
+                            Documentos del proyecto
+                        </span>
+
+                        <span class="accordion-arrow">▾</span>
+
+                    </label>
+
+
+                    <div class="accordion-body">
+
+                        <div class="upload-list">
+
+                            <label class="upload-row" for="certificadoTradicion">
+                                <div class="upload-symbol">↑</div>
+                                <div class="upload-info">
+                                    <strong>Certificado de Libertad y Tradición</strong>
+                                    <span>Documento que acredita la propiedad del predio · PDF, JPG o PNG</span>
+                                </div>
+                                <span class="upload-action">Adjuntar</span>
+                                <input type="file" id="certificadoTradicion" name="certificadoTradicion" accept=".pdf,.jpg,.jpeg,.png">
+                            </label>
+
+                            <label class="upload-row" for="autorizacionPropietario">
+                                <div class="upload-symbol">↑</div>
+                                <div class="upload-info">
+                                    <strong>Autorización del propietario</strong>
+                                    <span>Documento que autoriza la intervención, si aplica · PDF, JPG o PNG</span>
+                                </div>
+                                <span class="upload-action">Adjuntar</span>
+                                <input type="file" id="autorizacionPropietario" name="autorizacionPropietario" accept=".pdf,.jpg,.jpeg,.png">
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =====================================
+                     ACORDEÓN 04 · DOCUMENTOS DE LA AUTORIDAD
+                ====================================== -->
+
+                <div class="accordion">
+
+                    <input type="checkbox" id="acc4" class="accordion-toggle">
+
+                    <label for="acc4" class="accordion-header">
+
+                        <span class="accordion-number">04</span>
+
+                        <span class="accordion-title">
+                            Documentos de la autoridad ambiental
+                        </span>
+
+                        <span class="accordion-arrow">▾</span>
+
+                    </label>
+
+
+                    <div class="accordion-body">
+
+                        <p class="review-authority-tag">
+                            Autoridad: <strong id="reviewAuthority">—</strong>
+                        </p>
+
+
+                        <!-- CAR -->
+
+                        <div id="reviewCAR" style="display:none;">
+
+                            <h3 class="review-subtitle">Documentos generales</h3>
+
+                            <div class="upload-list">
+
+                                <label class="upload-row" for="carFormulario">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Formulario Único Nacional</strong>
+                                        <span>Diligenciado y firmado por el solicitante</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="carFormulario" id="carFormulario" accept=".pdf,.jpg,.jpeg,.png">
+                                </label>
+
+                                <label class="upload-row" for="carCedulaNatural">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Fotocopia de la cédula de ciudadanía</strong>
+                                        <span>Requerida para personas naturales</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="carCedulaNatural" id="carCedulaNatural" accept=".pdf,.jpg,.jpeg,.png">
+                                </label>
+
+                                <label class="upload-row" for="carCertificadoLegal">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Certificado de existencia y representación legal</strong>
+                                        <span>Requerido para personas jurídicas</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="carCertificadoLegal" id="carCertificadoLegal" accept=".pdf">
+                                </label>
+
+                                <label class="upload-row" for="carPoder">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Poder debidamente otorgado</strong>
+                                        <span>Requerido cuando se actúe mediante apoderado</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="carPoder" id="carPoder" accept=".pdf,.jpg,.jpeg,.png">
+                                </label>
+
+                                <label class="upload-row" for="carLibertad">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Certificado de libertad y tradición</strong>
+                                        <span>Expedido dentro del mes inmediatamente anterior</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="carLibertad" id="carLibertad" accept=".pdf">
+                                </label>
+
+                                <label class="upload-row" for="carAutorizacion">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Autorización del propietario</strong>
+                                        <span>Cuando corresponda según la situación del predio</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="carAutorizacion" id="carAutorizacion" accept=".pdf,.jpg,.jpeg,.png">
+                                </label>
+
+                                <label class="upload-row" for="carRut">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Registro Único Tributario — RUT</strong>
+                                        <span>Documento tributario del solicitante</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="carRut" id="carRut" accept=".pdf">
+                                </label>
+
+                                <label class="upload-row" for="carPlanoIGAC">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Plano del Instituto Geográfico Agustín Codazzi</strong>
+                                        <span>Debe localizar la obra objeto de la solicitud</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="carPlanoIGAC" id="carPlanoIGAC" accept=".pdf,.jpg,.jpeg,.png">
+                                </label>
+
+                            </div>
+
+
+                            <h3 class="review-subtitle">Documentos técnicos</h3>
+
+                            <div class="upload-list">
+
+                                <label class="upload-row" for="carMemorias">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Descripción y memoria de las obras</strong>
+                                        <span>Incluye cálculos y memorias hidrológicas, hidráulicas y estructurales</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="carMemorias" id="carMemorias" accept=".pdf,.doc,.docx">
+                                </label>
+
+                                <label class="upload-row" for="carPlanos">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Planos de ubicación y detalle de las obras</strong>
+                                        <span>Escala 1:10.000 o 1:25.000</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="carPlanos" id="carPlanos" accept=".pdf,.jpg,.jpeg,.png">
+                                </label>
+
+                                <label class="upload-row" for="carManejo">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Medidas de manejo ambiental</strong>
+                                        <span>Medidas para prevenir, mitigar o compensar impactos ambientales</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="carManejo" id="carManejo" accept=".pdf,.doc,.docx">
+                                </label>
+
+                                <label class="upload-row" for="carDescripcion">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Descripción explicativa del proyecto</strong>
+                                        <span>Localización, dimensión, costo estimado, especificaciones y plan de operación</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="carDescripcion" id="carDescripcion" accept=".pdf,.doc,.docx">
+                                </label>
+
+                                <label class="upload-row" for="carFuenteHidrica">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Plano de localización de la fuente hídrica</strong>
+                                        <span>Localización de la fuente hídrica en el área de influencia</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="carFuenteHidrica" id="carFuenteHidrica" accept=".pdf,.jpg,.jpeg,.png">
+                                </label>
+
+                                <label class="upload-row" for="carPresupuesto">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Estudios, presupuesto y memorias de cálculo</strong>
+                                        <span>Documentación relacionada con las obras a construir</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="carPresupuesto" id="carPresupuesto" accept=".pdf,.doc,.docx,.xlsx">
+                                </label>
+
+                                <label class="upload-row" for="carCosto">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Costo del proyecto</strong>
+                                        <span>Soporte o documento correspondiente al costo estimado del proyecto</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="carCosto" id="carCosto" accept=".pdf,.xlsx">
+                                </label>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- SDA -->
+
+                        <div id="reviewSDA" style="display:none;">
+
+                            <h3 class="review-subtitle">Documentos generales</h3>
+
+                            <div class="upload-list">
+
+                                <label class="upload-row" for="sdaFormulario">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Formulario Único Nacional</strong>
+                                        <span>Solicitud de ocupación de cauces, playas y lechos</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="sdaFormulario" id="sdaFormulario" accept=".pdf,.jpg,.jpeg,.png">
+                                </label>
+
+                                <label class="upload-row" for="sdaPropiedad">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Documento de propiedad</strong>
+                                        <span>Soporte correspondiente según el tipo de solicitante</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="sdaPropiedad" id="sdaPropiedad" accept=".pdf,.jpg,.jpeg,.png">
+                                </label>
+
+                                <label class="upload-row" for="sdaPersoneria">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Documento de existencia y personería jurídica</strong>
+                                        <span>Para juntas de acción comunal u otros organismos sin ánimo de lucro, si aplica</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="sdaPersoneria" id="sdaPersoneria" accept=".pdf">
+                                </label>
+
+                                <label class="upload-row" for="sdaPoder">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Poder</strong>
+                                        <span>Requerido cuando se actúe mediante apoderado</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="sdaPoder" id="sdaPoder" accept=".pdf,.jpg,.jpeg,.png">
+                                </label>
+
+                            </div>
+
+
+                            <h3 class="review-subtitle">Documentos técnicos</h3>
+
+                            <div class="upload-list">
+
+                                <label class="upload-row" for="sdaDescripcion">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Descripción del proyecto</strong>
+                                        <span>Incluye nombre, objetivos, justificación, actividades y coordenadas</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="sdaDescripcion" id="sdaDescripcion" accept=".pdf,.doc,.docx">
+                                </label>
+
+                                <label class="upload-row" for="sdaTopograficos">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Planos topográficos</strong>
+                                        <span>Planos longitudinales y transversales firmados por el profesional responsable</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="sdaTopograficos" id="sdaTopograficos" accept=".pdf,.jpg,.jpeg,.png">
+                                </label>
+
+                                <label class="upload-row" for="sdaFuente">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Plano de localización de la fuente hídrica</strong>
+                                        <span>Puntos a intervenir y área de influencia debidamente georreferenciados</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="sdaFuente" id="sdaFuente" accept=".pdf,.jpg,.jpeg,.png">
+                                </label>
+
+                                <label class="upload-row" for="sdaCalculos">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Planos y memorias de cálculo</strong>
+                                        <span>Cálculos estructurales e hidráulicos, especificaciones técnicas y procesos constructivos</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="sdaCalculos" id="sdaCalculos" accept=".pdf">
+                                </label>
+
+                                <label class="upload-row" for="sdaMedidas">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Medidas ambientales</strong>
+                                        <span>Medidas para agua, suelo, aire, paisaje, flora y fauna</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="sdaMedidas" id="sdaMedidas" accept=".pdf,.doc,.docx">
+                                </label>
+
+                                <label class="upload-row" for="sdaCompensaciones">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Compensaciones</strong>
+                                        <span>Matriz de áreas verdes y áreas a endurecer</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="sdaCompensaciones" id="sdaCompensaciones" accept=".pdf,.xlsx,.doc,.docx">
+                                </label>
+
+                                <label class="upload-row" for="sdaPaisajismo">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Acta de diseños paisajísticos aprobados</strong>
+                                        <span>Documento expedido por la Secretaría Distrital de Ambiente</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="sdaPaisajismo" id="sdaPaisajismo" accept=".pdf">
+                                </label>
+
+                                <label class="upload-row" for="sdaHumedales">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Condición especial — Humedales</strong>
+                                        <span>Diagnóstico de flora, fauna, agua y suelos cuando aplique</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="sdaHumedales" id="sdaHumedales" accept=".pdf,.doc,.docx">
+                                </label>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- CORPOBOYACÁ -->
+
+                        <div id="reviewCorpoboyaca" style="display:none;">
+
+                            <h3 class="review-subtitle">Documentos de identificación</h3>
+
+                            <div class="upload-list">
+
+                                <label class="upload-row" for="corpCedula">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Cédula de ciudadanía</strong>
+                                        <span>Requerida para personas naturales</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="corpCedula" id="corpCedula" accept=".pdf,.jpg,.jpeg,.png">
+                                </label>
+
+                                <label class="upload-row" for="corpExistencia">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Certificado de existencia y representación legal</strong>
+                                        <span>Requerido para personas jurídicas</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="corpExistencia" id="corpExistencia" accept=".pdf">
+                                </label>
+
+                                <label class="upload-row" for="corpRut">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Registro Único Tributario — RUT</strong>
+                                        <span>Requerido para personas jurídicas</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="corpRut" id="corpRut" accept=".pdf">
+                                </label>
+
+                            </div>
+
+
+                            <h3 class="review-subtitle">Derecho sobre el predio</h3>
+
+                            <div class="upload-list">
+
+                                <label class="upload-row" for="corpTradicion">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Certificado de tradición y libertad</strong>
+                                        <span>Expedición no superior a dos meses</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="corpTradicion" id="corpTradicion" accept=".pdf">
+                                </label>
+
+                                <label class="upload-row" for="corpDeclaracion">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Declaración extrajuicio</strong>
+                                        <span>Cuando el solicitante sea poseedor, si aplica</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="corpDeclaracion" id="corpDeclaracion" accept=".pdf">
+                                </label>
+
+                                <label class="upload-row" for="corpArrendamiento">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Autorización del propietario y contrato de arrendamiento</strong>
+                                        <span>Cuando el solicitante sea arrendatario</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="corpArrendamiento" id="corpArrendamiento" accept=".pdf">
+                                </label>
+
+                            </div>
+
+
+                            <h3 class="review-subtitle">Documentos técnicos</h3>
+
+                            <div class="upload-list">
+
+                                <label class="upload-row" for="corpDescripcion">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Descripción de la obra</strong>
+                                        <span>Descripción de la obra objeto de ocupación de cauce</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="corpDescripcion" id="corpDescripcion" accept=".pdf,.doc,.docx">
+                                </label>
+
+                                <label class="upload-row" for="corpDiseno">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Diseño de la obra</strong>
+                                        <span>Diseño correspondiente a la obra objeto de ocupación</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="corpDiseno" id="corpDiseno" accept=".pdf,.doc,.docx">
+                                </label>
+
+                                <label class="upload-row" for="corpCronograma">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Cronograma de actividades</strong>
+                                        <span>Cronograma expresado en semanas</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="corpCronograma" id="corpCronograma" accept=".pdf,.doc,.docx,.xlsx">
+                                </label>
+
+                                <label class="upload-row" for="corpManejoConstruccion">
+                                    <div class="upload-symbol">↑</div>
+                                    <div class="upload-info">
+                                        <strong>Manejo ambiental durante la construcción</strong>
+                                        <span>Documento técnico sobre el manejo ambiental durante la ejecución</span>
+                                    </div>
+                                    <span class="upload-action">Adjuntar</span>
+                                    <input type="file" name="corpManejoConstruccion" id="corpManejoConstruccion" accept=".pdf,.doc,.docx">
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- BOTONES -->
+
+                <div class="form-actions">
+
+                    <a href="form-doc.html" class="secondary-button">
+                        ← Volver
+                    </a>
+
+                    <button type="submit" class="primary-button" id="generateBtn">
+                        <span class="btn-label">Generar documento</span>
+                        <span class="btn-arrow">→</span>
+                        <span class="btn-spinner"></span>
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-content">
+            <span>EcoRegión SAS</span>
+            <span>Proyecto académico · 2026</span>
+        </div>
+
+    </footer>
+
+<script>
+
+/* =========================================
+   DATOS DE SESIÓN
+========================================= */
+
+const authority = sessionStorage.getItem("autoridad") || "";
+const applicant = sessionStorage.getItem("tipoSolicitante") || "";
+
+function dato(nombre) {
+    return sessionStorage.getItem(nombre) || "No registrado";
+}
+
+
+/* =========================================
+   RESUMEN EN PANTALLA
+========================================= */
+
+const authoritySummary = document.getElementById("authoritySummary");
+const applicantSummary = document.getElementById("applicantSummary");
+const reviewAuthority  = document.getElementById("reviewAuthority");
+
+if (authority) {
+    authoritySummary.textContent = authority;
+    reviewAuthority.textContent  = authority;
+}
+
+if (applicant === "natural") {
+    applicantSummary.textContent = "Persona Natural";
+} else if (applicant === "juridica") {
+    applicantSummary.textContent = "Persona Jurídica";
+}
+
+
+/* =========================================
+   MOSTRAR BLOQUES SEGÚN TIPO DE SOLICITANTE
+========================================= */
+
+const blockNatural   = document.getElementById("blockNatural");
+const blockJuridica  = document.getElementById("blockJuridica");
+const blockApoderado = document.getElementById("blockApoderado");
+
+const tipoSolicitante = document.getElementById("tipoSolicitante");
+const tieneApoderado  = document.getElementById("tieneApoderado");
+
+function actualizarBloquesSolicitante() {
+
+    if (!blockNatural || !blockJuridica || !blockApoderado) return;
+
+    blockNatural.style.display   = "none";
+    blockJuridica.style.display  = "none";
+    blockApoderado.style.display = "none";
+
+    if (tipoSolicitante.value === "natural") {
+        blockNatural.style.display = "block";
+    }
+
+    if (tipoSolicitante.value === "juridica") {
+        blockJuridica.style.display = "block";
+    }
+
+    if (tieneApoderado.value === "si") {
+        blockApoderado.style.display = "block";
+    }
+
+}
+
+tipoSolicitante.addEventListener("change", actualizarBloquesSolicitante);
+tieneApoderado.addEventListener("change", actualizarBloquesSolicitante);
+
+
+/* =========================================
+   MOSTRAR BLOQUES DE AUTORIDAD
+========================================= */
+
+const reviewCAR         = document.getElementById("reviewCAR");
+const reviewSDA         = document.getElementById("reviewSDA");
+const reviewCorpoboyaca = document.getElementById("reviewCorpoboyaca");
+
+reviewCAR.style.display         = "none";
+reviewSDA.style.display         = "none";
+reviewCorpoboyaca.style.display = "none";
+
+if (authority === "CAR Cundinamarca") {
+    reviewCAR.style.display = "block";
+} else if (authority === "SDA") {
+    reviewSDA.style.display = "block";
+} else if (authority === "Corpoboyaca") {
+    reviewCorpoboyaca.style.display = "block";
+}
+
+
+/* =========================================
+   AUTORRELLENO DE CAMPOS
+========================================= */
+
+function restaurarCampos() {
+
+    document.querySelectorAll("input, select, textarea").forEach(function (el) {
+
+        if (!el.name) return;
+        if (el.type === "file") return;
+
+        const valor = sessionStorage.getItem(el.name);
+        if (valor === null) return;
+
+        if (el.type === "checkbox") {
+            el.checked = (valor === "true");
+        } else {
+            el.value = valor;
+        }
+
+    });
+
+    actualizarBloquesSolicitante();
+    restaurarArchivosVisuales();
+
+}
+
+
+/* =========================================
+   RESTAURAR ESTADO VISUAL DE ARCHIVOS
+========================================= */
+
+function restaurarArchivosVisuales() {
+
+    document.querySelectorAll('input[type="file"]').forEach(function (input) {
+
+        if (!input.name) return;
+
+        const nombreGuardado = sessionStorage.getItem(input.name + "_nombre");
+        if (!nombreGuardado) return;
+
+        const row = input.closest(".upload-row");
+        if (!row) return;
+
+        const symbol = row.querySelector(".upload-symbol");
+        const action = row.querySelector(".upload-action");
+        const info   = row.querySelector(".upload-info");
+
+        const previo = info.querySelector(".file-name");
+        if (previo) previo.remove();
+
+        row.classList.add("has-file");
+        if (symbol) symbol.textContent = "✓";
+        if (action) action.textContent = "Cambiar";
+
+        const chip = document.createElement("span");
+        chip.className = "file-name";
+        chip.textContent = nombreGuardado;
+        info.appendChild(chip);
+
+    });
+
+}
+
+
+/* =========================================
+   AUTOGUARDADO
+========================================= */
+
+function guardarCampo(event) {
+
+    const el = event.target;
+    if (!el.name) return;
+    if (el.type === "file") return;
+
+    if (el.type === "checkbox") {
+        sessionStorage.setItem(el.name, el.checked);
+    } else {
+        sessionStorage.setItem(el.name, el.value);
+    }
+
+}
+
+document.querySelectorAll("input, select, textarea").forEach(function (el) {
+
+    if (el.type === "file") return;
+
+    el.addEventListener("input", guardarCampo);
+    el.addEventListener("change", guardarCampo);
+    el.addEventListener("blur", guardarCampo);
+
+});
+
+
+/* =========================================
+   FEEDBACK VISUAL DE ARCHIVOS
+========================================= */
+
+document.querySelectorAll('input[type="file"]').forEach(function (input) {
+
+    input.addEventListener("change", function () {
+
+        const row = input.closest(".upload-row");
+        if (!row) return;
+
+        const symbol = row.querySelector(".upload-symbol");
+        const action = row.querySelector(".upload-action");
+        const info   = row.querySelector(".upload-info");
+
+        const previo = info.querySelector(".file-name");
+        if (previo) previo.remove();
+
+        if (input.files && input.files.length > 0) {
+
+            const archivo = input.files[0];
+
+            row.classList.add("has-file");
+            if (symbol) symbol.textContent = "✓";
+            if (action) action.textContent = "Cambiar";
+
+            const chip = document.createElement("span");
+            chip.className = "file-name";
+            chip.textContent = archivo.name;
+            info.appendChild(chip);
+
+            if (input.name) {
+                sessionStorage.setItem(input.name + "_nombre", archivo.name);
+            }
+
+        } else {
+
+            row.classList.remove("has-file");
+            if (symbol) symbol.textContent = "↑";
+            if (action) action.textContent = "Adjuntar";
+
+            if (input.name) {
+                sessionStorage.removeItem(input.name + "_nombre");
+            }
+
+        }
+
+    });
+
+});
+
+
+/* =========================================
+   VALIDACIÓN SUAVE
+========================================= */
+
+function validarFormulario() {
+
+    let valido = true;
+    let primeroInvalido = null;
+
+    document.querySelectorAll("[required]").forEach(function (el) {
+
+        el.style.borderColor = "";
+
+        let vacio = false;
+
+        if (el.type === "checkbox") {
+            vacio = !el.checked;
+        } else if (el.type === "file") {
+            vacio = false;
+        } else {
+            vacio = (el.value.trim() === "");
+        }
+
+        if (vacio) {
+            el.style.borderColor = "#c65a5a";
+            valido = false;
+            if (!primeroInvalido) primeroInvalido = el;
+        }
+
+    });
+
+    if (!valido && primeroInvalido) {
+        primeroInvalido.scrollIntoView({ behavior: "smooth", block: "center" });
+        primeroInvalido.focus();
+    }
+
+    return valido;
+
+}
+
+
+/* =========================================
+   DATOS PARA EL DOCUMENTO
+========================================= */
+
+const nombres              = dato("nombres");
+const razonSocial          = dato("razonSocial");
+const numeroDocumento      = dato("numeroDocumento");
+const nit                  = dato("nit");
+const representante        = dato("representante");
+const correo               = dato("correo");
+const correoInstitucional  = dato("correoInstitucional");
+const telefono             = dato("telefono");
+const celular              = dato("celular");
+const telefonoEmpresa      = dato("telefonoEmpresa");
+const direccion            = dato("direccion");
+const direccionEmpresa     = dato("direccionEmpresa");
+const nombreApoderado      = dato("nombreApoderado");
+
+const departamento         = dato("departamento");
+const municipio            = dato("municipio");
+const vereda               = dato("vereda");
+const cuerpoAgua           = dato("cuerpoAgua");
+const nombreProyecto       = dato("nombreProyecto");
+const cedulaCatastral      = dato("cedulaCatastral");
+const propietario          = dato("propietario");
+
+const tipoOcupacion        = dato("tipoOcupacion");
+const tiempoOcupacion      = dato("tiempoOcupacion");
+const tipoActividad        = dato("tipoActividad");
+const obrasRonda           = dato("obrasRonda");
+const altitud              = dato("altitud");
+const areaOcupacion        = dato("areaOcupacion");
+const longitudObra         = dato("longitudObra");
+const anchoObra            = dato("anchoObra");
+const alturaCauce          = dato("alturaCauce");
+const tipoCimentacion      = dato("cimentacion");
+
+const norte                = dato("norte");
+const este                 = dato("este");
+const coordenadas          = "N: " + norte + "  /  E: " + este;
+
+const analisisHidrologico  = dato("analisisHidrologico");
+const analisisHidraulico   = dato("analisisHidraulico");
+const estudioSocavacion    = dato("estudioSocavacion");
+const caudalDiseno         = dato("caudalDiseno");
+const periodoRetorno       = dato("periodoRetorno");
+const nameValue            = dato("name");
+const seccionesCauce       = dato("seccionesCauce");
+const condicionesGeomorfologicas = dato("condicionesGeomorfologicas");
+
+const descripcionProyecto  = dato("descripcionProyecto");
+const justificacion        = dato("justificacion");
+const objetivos            = dato("objetivos");
+const beneficios           = dato("beneficios");
+
+const medidasManejo        = dato("medidasManejo");
+const sistemaOcupacion     = dato("sistemaOcupacion");
+const planRiesgo           = dato("planRiesgo");
+const gestionResiduos      = dato("gestionResiduos");
+const cronograma           = dato("cronograma");
+
+let nombreSolicitante = "Solicitante";
+if (applicant === "natural") {
+    nombreSolicitante = nombres;
+} else if (applicant === "juridica") {
+    nombreSolicitante = razonSocial;
+}
+
+
+/* =========================================
+   ENVÍO → GENERAR DOCUMENTO
+========================================= */
+
+const reviewForm  = document.getElementById("reviewForm");
+const generateBtn = document.getElementById("generateBtn");
+
+reviewForm.addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
+    if (!validarFormulario()) return;
+
+    document.querySelectorAll("input, select, textarea").forEach(function (el) {
+
+        if (!el.name) return;
+        if (el.type === "file") return;
+
+        if (el.type === "checkbox") {
+            sessionStorage.setItem(el.name, el.checked);
+        } else {
+            sessionStorage.setItem(el.name, el.value);
+        }
+
+    });
+
+    document.querySelectorAll('input[type="file"]').forEach(function (input) {
+        if (input.files && input.files.length > 0 && input.name) {
+            sessionStorage.setItem(input.name + "_nombre", input.files[0].name);
+        }
+    });
+
+    generateBtn.classList.add("is-generating");
+    generateBtn.disabled = true;
+
+    generarDocumento();
+
+});
+
+
+/* =========================================
+   GENERAR DOCUMENTO WORD
+========================================= */
+
+async function generarDocumento() {
+
+    try {
+
+        const {
+            Document, Packer, Paragraph, TextRun,
+            AlignmentType, Table, TableRow, TableCell,
+            WidthType, BorderStyle, ShadingType
+        } = docx;
+
+        const VERDE        = "356b55";
+        const VERDE_OSCURO = "244b3b";
+        const GRIS         = "68736d";
+        const GRIS_CLARO   = "929b96";
+        const BORDE        = "dfe7e2";
+        const TEXTO        = "1f2b25";
+
+        function sinBordes() {
+            return {
+                top:    { style: BorderStyle.NONE, size: 0, color: "auto" },
+                bottom: { style: BorderStyle.NONE, size: 0, color: "auto" },
+                left:   { style: BorderStyle.NONE, size: 0, color: "auto" },
+                right:  { style: BorderStyle.NONE, size: 0, color: "auto" }
+            };
+        }
+
+        function conBordes() {
+            return {
+                top:    { style: BorderStyle.SINGLE, size: 4, color: BORDE },
+                bottom: { style: BorderStyle.SINGLE, size: 4, color: BORDE },
+                left:   { style: BorderStyle.SINGLE, size: 4, color: BORDE },
+                right:  { style: BorderStyle.SINGLE, size: 4, color: BORDE }
+            };
+        }
+
+        function seccion(numero, titulo) {
+            return new Paragraph({
+                spacing: { before: 420, after: 200 },
+                border: {
+                    bottom: { color: BORDE, space: 8, style: BorderStyle.SINGLE, size: 6 }
+                },
+                children: [new TextRun({
+                    text: numero + ".  " + titulo,
+                    bold: true, size: 24, color: VERDE_OSCURO, font: "Calibri"
+                })]
+            });
+        }
+
+        function subtitulo(texto) {
+            return new Paragraph({
+                spacing: { before: 260, after: 100 },
+                children: [new TextRun({
+                    text: texto, bold: true, size: 20, color: VERDE, font: "Calibri"
+                })]
+            });
+        }
+
+        function parrafo(texto) {
+            return new Paragraph({
+                alignment: AlignmentType.JUSTIFIED,
+                spacing: { after: 160, line: 300 },
+                children: [new TextRun({
+                    text: String(texto), size: 21, color: TEXTO, font: "Calibri"
+                })]
+            });
+        }
+
+        function filaInfo(etiqueta, valor) {
+            return new TableRow({
+                children: [
+                    new TableCell({
+                        width: { size: 30, type: WidthType.PERCENTAGE },
+                        borders: sinBordes(),
+                        margins: { top: 40, bottom: 40, left: 0, right: 120 },
+                        children: [new Paragraph({
+                            children: [new TextRun({
+                                text: etiqueta, bold: true, size: 20,
+                                color: VERDE_OSCURO, font: "Calibri"
+                            })]
+                        })]
+                    }),
+                    new TableCell({
+                        width: { size: 70, type: WidthType.PERCENTAGE },
+                        borders: sinBordes(),
+                        margins: { top: 40, bottom: 40, left: 0, right: 0 },
+                        children: [new Paragraph({
+                            children: [new TextRun({
+                                text: String(valor), size: 20,
+                                color: TEXTO, font: "Calibri"
+                            })]
+                        })]
+                    })
+                ]
+            });
+        }
+
+        function tablaInfo(filas) {
+            return new Table({
+                width: { size: 100, type: WidthType.PERCENTAGE },
+                rows: filas.map(f => filaInfo(f[0], f[1]))
+            });
+        }
+
+        function caja(texto) {
+            return new Table({
+                width: { size: 100, type: WidthType.PERCENTAGE },
+                rows: [new TableRow({
+                    children: [new TableCell({
+                        borders: conBordes(),
+                        shading: { type: ShadingType.CLEAR, fill: "edf4ef" },
+                        margins: { top: 200, bottom: 200, left: 240, right: 240 },
+                        children: [new Paragraph({
+                            spacing: { line: 300 },
+                            children: [new TextRun({
+                                text: String(texto), size: 20,
+                                color: VERDE_OSCURO, font: "Calibri"
+                            })]
+                        })]
+                    })]
+                })]
+            });
+        }
+
+        function espacio(alto) {
+            return new Paragraph({
+                spacing: { after: alto },
+                children: [new TextRun({ text: "", size: 2 })]
+            });
+        }
+
+        const nombreFinal      = applicant === "natural" ? nombres : razonSocial;
+        const documentoFinal   = applicant === "natural" ? numeroDocumento : nit;
+        const correoFinal      = applicant === "natural" ? correo : correoInstitucional;
+        const telefonoFinal    = applicant === "natural" ? telefono : telefonoEmpresa;
+        const direccionFinal   = applicant === "natural" ? direccion : direccionEmpresa;
+        const tipoFinal        = applicant === "natural" ? "Persona Natural" : "Persona Jurídica";
+        const rolFinal         = applicant === "natural" ? "Solicitante" : "Representante Legal";
+
+        const fecha = new Date().toLocaleDateString("es-CO", {
+            year: "numeric", month: "long", day: "numeric"
+        });
+
+        const documento = new Document({
+
+            creator: "EcoRegión",
+            title: "Solicitud de Permiso de Ocupación de Cauce",
+
+            sections: [{
+
+                properties: {
+                    page: {
+                        margin: { top: 1300, bottom: 1300, left: 1300, right: 1300 }
+                    }
+                },
+
+                children: [
+
+                    /* ENCABEZADO */
+
+                    new Paragraph({
+                        alignment: AlignmentType.CENTER,
+                        spacing: { after: 80 },
+                        children: [new TextRun({
+                            text: "DOCUMENTO TÉCNICO DE SOPORTE",
+                            size: 17, color: GRIS, font: "Calibri"
+                        })]
+                    }),
+
+                    new Paragraph({
+                        alignment: AlignmentType.CENTER,
+                        spacing: { after: 100 },
+                        children: [new TextRun({
+                            text: "SOLICITUD DE PERMISO DE OCUPACIÓN DE CAUCE",
+                            bold: true, size: 28, color: TEXTO, font: "Calibri"
+                        })]
+                    }),
+
+                    new Paragraph({
+                        alignment: AlignmentType.CENTER,
+                        spacing: { after: 40 },
+                        children: [new TextRun({
+                            text: "Sometida a consideración de " + authority,
+                            italics: true, size: 19, color: GRIS, font: "Calibri"
+                        })]
+                    }),
+
+                    new Paragraph({
+                        alignment: AlignmentType.CENTER,
+                        spacing: { after: 360 },
+                        border: {
+                            bottom: { color: BORDE, space: 10, style: BorderStyle.SINGLE, size: 6 }
+                        },
+                        children: [new TextRun({
+                            text: "Generado el " + fecha + " a través de la plataforma EcoRegión",
+                            italics: true, size: 17, color: GRIS_CLARO, font: "Calibri"
+                        })]
+                    }),
+
+
+                    /* 1. SOLICITANTE */
+
+                    seccion("1", "INFORMACIÓN GENERAL DEL SOLICITANTE"),
+
+                    tablaInfo([
+                        ["Solicitante", nombreFinal],
+                        ["Tipo de solicitante", tipoFinal],
+                        ["Documento / NIT", documentoFinal],
+                        ["Representante legal", representante],
+                        ["Correo de notificación", correoFinal],
+                        ["Teléfono", telefonoFinal],
+                        ["Dirección", direccionFinal],
+                        ["Apoderado", nombreApoderado]
+                    ]),
+
+
+                    /* 2. DESCRIPCIÓN */
+
+                    seccion("2", "DESCRIPCIÓN DEL CAUCE Y PROYECTO DE OCUPACIÓN"),
+
+                    parrafo(descripcionProyecto),
+
+                    subtitulo("Datos de localización"),
+
+                    caja(
+                        "Coordenadas (MAGNA-SIRGAS Origen Nacional):  " + coordenadas +
+                        "\n\nDepartamento: " + departamento +
+                        "    |    Municipio: " + municipio +
+                        "    |    Vereda: " + vereda
+                    ),
+
+                    espacio(200),
+
+                    subtitulo("Justificación de la necesidad"),
+
+                    parrafo(justificacion),
+
+
+                    /* 3. COMPONENTE TÉCNICO */
+
+                    seccion("3", "COMPONENTE TÉCNICO"),
+
+                    subtitulo("3.1  Características de la ocupación"),
+
+                    tablaInfo([
+                        ["Tipo de ocupación", tipoOcupacion],
+                        ["Tiempo de ocupación", tiempoOcupacion],
+                        ["Actividad", tipoActividad],
+                        ["Cuerpo de agua", cuerpoAgua],
+                        ["Predio / proyecto", nombreProyecto],
+                        ["Cédula catastral", cedulaCatastral],
+                        ["Propietario", propietario],
+                        ["Área estimada (m²)", areaOcupacion],
+                        ["Longitud (m)", longitudObra],
+                        ["Ancho (m)", anchoObra],
+                        ["Altitud (msnm)", altitud],
+                        ["Tipo de cimentación", tipoCimentacion]
+                    ]),
+
+                    subtitulo("3.2  Aspectos hidrológicos e hidráulicos"),
+
+                    parrafo("Análisis hidrológico: " + analisisHidrologico),
+                    parrafo("Análisis hidráulico: " + analisisHidraulico),
+                    parrafo("Estudio de socavación: " + estudioSocavacion),
+
+                    tablaInfo([
+                        ["Caudal de diseño (m³/s)", caudalDiseno],
+                        ["Periodo de retorno (años)", periodoRetorno],
+                        ["NAME", nameValue],
+                        ["Secciones características", seccionesCauce],
+                        ["Condiciones geomorfológicas", condicionesGeomorfologicas]
+                    ]),
+
+
+                    /* 4. GESTIÓN AMBIENTAL */
+
+                    seccion("4", "PLAN DE MANEJO Y GESTIÓN AMBIENTAL"),
+
+                    parrafo(medidasManejo),
+
+                    subtitulo("Sistema a emplear en la ocupación"),
+                    parrafo(sistemaOcupacion),
+
+                    subtitulo("Plan de gestión del riesgo"),
+                    parrafo(planRiesgo),
+
+                    subtitulo("Gestión de residuos"),
+                    parrafo(gestionResiduos),
+
+                    subtitulo("Cronograma de obras"),
+                    parrafo(cronograma),
+
+
+                    /* 5. DECLARACIÓN */
+
+                    seccion("5", "DECLARACIÓN DEL SOLICITANTE"),
+
+                    parrafo("El solicitante declara que la información registrada en este documento corresponde a los datos suministrados durante el proceso de preparación de la solicitud. Antes de su presentación ante la autoridad ambiental competente, se deberá verificar la exactitud, vigencia y suficiencia de la información y documentación requerida."),
+
+
+                    /* FIRMA */
+
+                    espacio(1000),
+
+                    new Paragraph({
+                        border: {
+                            top: { color: TEXTO, space: 2, style: BorderStyle.SINGLE, size: 6 }
+                        },
+                        children: [new TextRun({ text: "", size: 2 })]
+                    }),
+
+                    new Paragraph({
+                        spacing: { before: 80, after: 30 },
+                        children: [new TextRun({
+                            text: nombreFinal, bold: true, size: 22,
+                            color: TEXTO, font: "Calibri"
+                        })]
+                    }),
+
+                    new Paragraph({
+                        children: [new TextRun({
+                            text: rolFinal + "  —  Documento: " + documentoFinal,
+                            size: 18, color: GRIS, font: "Calibri"
+                        })]
+                    }),
+
+
+                    /* PIE */
+
+                    espacio(500),
+
+                    new Paragraph({
+                        alignment: AlignmentType.CENTER,
+                        border: {
+                            top: { color: BORDE, space: 8, style: BorderStyle.SINGLE, size: 4 }
+                        },
+                        children: [new TextRun({
+                            text: "EcoRegión SAS  —  Proyecto académico · 2026",
+                            size: 16, italics: true, color: GRIS_CLARO, font: "Calibri"
+                        })]
+                    })
+
+                ]
+            }]
+        });
+
+
+        /* DESCARGAR */
+
+        const blob = await Packer.toBlob(documento);
+        const url = URL.createObjectURL(blob);
+        const enlace = document.createElement("a");
+
+        enlace.href = url;
+        enlace.download =
+            "Solicitud_EcoRegion_" +
+            nombreSolicitante
+                .replace(/[^a-zA-Z0-9áéíóúÁÉÍÓÚñÑ ]/g, "")
+                .replace(/\s+/g, "_") +
+            ".docx";
+
+        document.body.appendChild(enlace);
+        enlace.click();
+        document.body.removeChild(enlace);
+        URL.revokeObjectURL(url);
+
+
+        /* ANIMACIÓN DE ÉXITO */
+
+        generateBtn.classList.remove("is-generating");
+        generateBtn.classList.add("is-done");
+
+        const btnLabel = generateBtn.querySelector(".btn-label");
+        if (btnLabel) btnLabel.textContent = "Documento generado";
+
+
+        /* LIMPIAR Y REDIRIGIR */
+
+        setTimeout(function () {
+
+            sessionStorage.clear();
+            window.location.href = "form-success.html";
+
+        }, 1400);
+
+    } catch (error) {
+
+        console.error(error);
+
+        generateBtn.classList.remove("is-generating");
+        generateBtn.disabled = false;
+
+        alert("No fue posible generar el documento. Revisa la consola del navegador.");
+
+    }
+
+}
+
+
+/* =========================================
+   INICIALIZAR
+========================================= */
+
+restaurarCampos();
+
+</script>
+
+</body>
+
+
+
+</body>
+
+</html>

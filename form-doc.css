@@ -1,0 +1,1046 @@
+/* =========================================
+   VARIABLES
+========================================= */
+
+:root {
+    --green: #356b55;
+    --green-dark: #244b3b;
+    --green-soft: #edf4ef;
+
+    --cream: #fbfaf7;
+    --white: #ffffff;
+
+    --dark: #1f2b25;
+    --text: #68736d;
+    --text-light: #929b96;
+
+    --border: #dfe7e2;
+
+    --container: 1120px;
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: var(--cream);
+
+    color: var(--dark);
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.navbar {
+    height: 78px;
+
+    background: var(--green-dark);
+
+    border-bottom: 1px solid var(--green-dark);
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+.navbar-content {
+    width: min(100% - 48px, var(--container));
+
+    height: 100%;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.logo {
+    display: flex;
+
+    align-items: center;
+}
+
+
+.logo img {
+    width: 145px;
+
+    height: auto;
+
+    display: block;
+}
+
+
+.back-home {
+    color: rgba(255, 255, 255, 0.78);
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    transition: color 0.2s ease;
+}
+
+
+.back-home:hover {
+    color: var(--white);
+}
+
+
+/* =========================================
+   CONTENEDOR
+========================================= */
+
+.form-container {
+    width: min(100% - 48px, var(--container));
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.form-intro {
+    padding: 76px 0 62px;
+}
+
+
+.intro-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 32px;
+}
+
+
+.eyebrow {
+    color: var(--green);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.8px;
+}
+
+
+.step-counter {
+    color: var(--text-light);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+
+.form-intro h1 {
+    color: var(--dark);
+
+    font-size: clamp(52px, 7vw, 88px);
+
+    font-weight: 400;
+
+    line-height: 0.98;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 30px;
+}
+
+
+.form-intro>p {
+    max-width: 650px;
+
+    color: var(--text);
+
+    font-size: 16px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================
+   RESUMEN DE SOLICITUD
+========================================= */
+
+.application-summary {
+    margin-top: 40px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    border-top: 1px solid var(--border);
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.application-summary div {
+    padding: 18px 0;
+}
+
+
+.application-summary div+div {
+    padding-left: 35px;
+
+    border-left: 1px solid var(--border);
+}
+
+
+.application-summary span {
+    display: block;
+
+    color: var(--text-light);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.2px;
+
+    margin-bottom: 4px;
+}
+
+
+.application-summary strong {
+    color: var(--dark);
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   PROGRESO
+========================================= */
+
+.progress {
+    margin-top: 54px;
+}
+
+
+.progress-line {
+    width: 100%;
+
+    height: 2px;
+
+    background: var(--border);
+
+    position: relative;
+}
+
+
+.progress-active {
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    width: 100%;
+
+    height: 2px;
+
+    background: var(--green);
+}
+
+
+.progress-labels {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    margin-top: 13px;
+}
+
+
+.progress-labels span {
+    color: var(--text-light);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+}
+
+
+.progress-labels span:nth-child(2) {
+    text-align: center;
+}
+
+
+.progress-labels span:last-child {
+    text-align: right;
+}
+
+
+.progress-labels .active {
+    color: var(--green);
+}
+
+
+/* =========================================
+   AUTORIDAD
+========================================= */
+
+.authority-section {
+    margin-bottom: 0;
+}
+
+
+.authority-header {
+    padding: 34px 0 35px;
+
+    border-top: 2px solid var(--green);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.authority-label {
+    display: block;
+
+    color: var(--green);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.6px;
+
+    margin-bottom: 7px;
+}
+
+
+.authority-header h2 {
+    color: var(--dark);
+
+    font-size: 29px;
+
+    font-weight: 500;
+
+    letter-spacing: -0.7px;
+}
+
+
+.authority-tag {
+    color: var(--green);
+
+    border: 1px solid var(--green);
+
+    border-radius: 30px;
+
+    padding: 7px 12px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   BLOQUES
+========================================= */
+
+.form-block {
+    padding: 38px 0 46px;
+
+    border-top: 2px solid var(--green);
+}
+
+
+.form-block:last-of-type {
+    border-bottom: 2px solid var(--green);
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.block-heading {
+    display: grid;
+
+    grid-template-columns: 70px 1fr;
+
+    gap: 10px;
+
+    margin-bottom: 35px;
+}
+
+
+.block-number {
+    color: var(--green);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    padding-top: 5px;
+}
+
+
+.block-heading h2 {
+    color: var(--dark);
+
+    font-size: 25px;
+
+    font-weight: 500;
+
+    letter-spacing: -0.5px;
+
+    margin-bottom: 5px;
+}
+
+
+.block-heading p {
+    color: var(--text);
+
+    font-size: 13px;
+
+    max-width: 650px;
+
+    line-height: 1.65;
+}
+
+/* =========================================
+   DOCUMENTOS
+========================================= */
+
+.document-row {
+    min-height: 82px;
+
+    border-top: 1px solid var(--border);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 18px;
+
+    padding: 17px 0;
+}
+
+
+.document-row:last-child {
+    border-bottom: 1px solid var(--border);
+}
+
+
+.document-info {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    min-width: 0;
+    flex: 1;
+}
+
+
+.document-icon {
+    width: 34px;
+    height: 34px;
+
+    border: 1px solid var(--border);
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--green);
+
+    font-size: 17px;
+
+    flex-shrink: 0;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.document-info strong {
+    display: block;
+
+    color: var(--dark);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    margin-bottom: 3px;
+}
+
+
+.document-info small {
+    display: block;
+
+    color: var(--text-light);
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   BOTÓN ADJUNTAR
+========================================= */
+
+.upload-button {
+    color: var(--green);
+
+    border: 1px solid var(--border);
+
+    border-radius: 2px;
+
+    padding: 9px 14px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    flex-shrink: 0;
+
+    background: transparent;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.upload-button:hover {
+    background: var(--green-soft);
+
+    border-color: #cbd9d0;
+}
+
+
+.upload-button input {
+    display: none;
+}
+
+
+/* =========================================
+   NOMBRE DE ARCHIVO ADJUNTO
+========================================= */
+
+.document-info .file-name {
+    display: block;
+
+    color: var(--text-light);
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    margin-top: 3px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    max-width: 480px;
+}
+
+/* =========================================
+   NOTAS
+========================================= */
+
+.info-note {
+    margin-top: 32px;
+
+    padding: 20px 22px;
+
+    background: var(--green-soft);
+
+    border-left: 3px solid var(--green);
+
+    display: flex;
+
+    gap: 15px;
+}
+
+
+.note-icon {
+    width: 23px;
+
+    height: 23px;
+
+    border: 1px solid var(--green);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--green);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    flex-shrink: 0;
+}
+
+
+.info-note strong {
+    display: block;
+
+    color: var(--dark);
+
+    font-size: 12px;
+
+    margin-bottom: 3px;
+}
+
+
+.info-note p {
+    color: var(--text);
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+.info-note.important {
+    margin: 0 0 40px;
+
+    border-top: 1px solid var(--border);
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+/* =========================================
+   PROCESO SDA
+========================================= */
+
+.process-info {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    border-top: 1px solid var(--border);
+
+    border-bottom: 1px solid var(--border);
+
+    margin-top: 35px;
+}
+
+
+.process-item {
+    padding: 22px 20px;
+
+    display: flex;
+
+    gap: 13px;
+}
+
+
+.process-item+.process-item {
+    border-left: 1px solid var(--border);
+}
+
+
+.process-item>span {
+    color: var(--green);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+.process-item strong {
+    display: block;
+
+    color: var(--dark);
+
+    font-size: 12px;
+
+    margin-bottom: 3px;
+}
+
+
+.process-item p {
+    color: var(--text-light);
+
+    font-size: 10px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   BOTONES
+========================================= */
+
+.form-actions {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 38px 0 75px;
+}
+
+
+.secondary-button,
+.primary-button {
+    min-height: 48px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    padding: 0 19px;
+
+    border-radius: 5px;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.secondary-button {
+    color: var(--text);
+
+    border: 1px solid var(--border);
+
+    background: transparent;
+}
+
+
+.secondary-button:hover {
+    color: var(--dark);
+
+    border-color: #c8d3cd;
+}
+
+
+.primary-button {
+    color: var(--white);
+
+    border: 1px solid var(--green-dark);
+
+    background: var(--green-dark);
+}
+
+
+.primary-button:hover {
+    background: var(--green);
+
+    border-color: var(--green);
+}
+
+
+.primary-button span {
+    font-size: 17px;
+
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background: var(--green-dark);
+
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+.footer-content {
+    width: min(100% - 48px, var(--container));
+
+    min-height: 90px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    font-size: 11px;
+}
+
+
+.footer-content span:first-child {
+    color: var(--white);
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 850px) {
+
+    .process-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .process-item:nth-child(3) {
+        border-left: none;
+        border-top: 1px solid var(--border);
+    }
+
+
+    .process-item:nth-child(4) {
+        border-top: 1px solid var(--border);
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .navbar-content,
+    .form-container,
+    .footer-content {
+        width: min(100% - 32px, var(--container));
+    }
+
+
+    .form-intro {
+        padding: 55px 0 45px;
+    }
+
+
+    .form-intro h1 {
+        font-size: 56px;
+
+        letter-spacing: -3px;
+    }
+
+
+    .application-summary {
+        grid-template-columns: 1fr;
+    }
+
+
+    .application-summary div+div {
+        padding-left: 0;
+
+        border-left: none;
+
+        border-top: 1px solid var(--border);
+    }
+
+
+    .block-heading {
+        grid-template-columns: 45px 1fr;
+    }
+
+
+    .document-row {
+        align-items: flex-start;
+
+        padding: 20px 0;
+    }
+
+
+    .document-info {
+        align-items: flex-start;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .navbar {
+        height: 70px;
+    }
+
+
+    .logo img {
+        width: 125px;
+    }
+
+
+    .back-home {
+        font-size: 11px;
+    }
+
+
+    .form-intro h1 {
+        font-size: 45px;
+
+        letter-spacing: -2.5px;
+    }
+
+
+    .authority-header h2 {
+        font-size: 23px;
+    }
+
+
+    .authority-tag {
+        font-size: 8px;
+
+        padding: 6px 9px;
+    }
+
+
+    .progress-labels span {
+        font-size: 9px;
+    }
+
+
+    .block-heading h2 {
+        font-size: 21px;
+    }
+
+
+    .block-heading p {
+        font-size: 12px;
+    }
+
+
+    .document-row {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 14px;
+    }
+
+
+    .upload-button {
+        margin-left: 47px;
+    }
+
+
+    .process-info {
+        grid-template-columns: 1fr;
+    }
+
+
+    .process-item,
+    .process-item:nth-child(3),
+    .process-item:nth-child(4) {
+        border-left: none;
+
+        border-top: 1px solid var(--border);
+    }
+
+
+    .process-item:first-child {
+        border-top: none;
+    }
+
+
+    .form-actions {
+        padding-bottom: 55px;
+    }
+
+
+    .secondary-button,
+    .primary-button {
+        min-height: 45px;
+
+        font-size: 11px;
+    }
+
+
+    .footer-content {
+        min-height: 80px;
+
+        gap: 15px;
+
+        flex-direction: column;
+
+        justify-content: center;
+    }
+
+}

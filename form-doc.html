@@ -1,0 +1,2003 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EcoRegión | EcoTrámiteCo</title>
+
+    <link rel="icon" type="image/png" href="img/Logotipo.png">
+    <link rel="stylesheet" href="form-doc.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="navbar">
+        <div class="navbar-content">
+
+            <a href="index.html" class="logo">
+                <img src="img/Logo.png" alt="EcoRegión">
+            </a>
+
+            <a href="form-proy.html" class="back-home">
+                ← Volver
+            </a>
+
+        </div>
+    </header>
+
+
+    <!-- CONTENIDO -->
+    <main class="form-container">
+
+        <!-- INTRO -->
+        <section class="form-intro">
+
+            <div class="intro-top">
+
+                <span class="eyebrow">
+                    DOCUMENTOS Y ANEXOS
+                </span>
+
+                <span class="step-counter">
+                    03 / 03
+                </span>
+
+            </div>
+
+
+            <h1>
+                Documentos<br>
+                y anexos.
+            </h1>
+
+
+            <p>
+                Adjunta los documentos requeridos para tu solicitud.
+                Los requisitos se han organizado según la autoridad
+                ambiental y el tipo de solicitante seleccionado.
+            </p>
+
+
+            <!-- INFORMACIÓN DE LA SOLICITUD -->
+            <div class="application-summary">
+
+                <div>
+                    <span>Autoridad ambiental</span>
+                    <strong id="authoritySummary">
+                        —
+                    </strong>
+                </div>
+
+                <div>
+                    <span>Tipo de solicitante</span>
+                    <strong id="applicantSummary">
+                        —
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <!-- PROGRESO -->
+            <div class="progress">
+
+                <div class="progress-line">
+                    <span class="progress-active"></span>
+                </div>
+
+                <div class="progress-labels">
+
+                    <span>
+                        01&nbsp; Información
+                    </span>
+
+                    <span>
+                        02&nbsp; Proyecto
+                    </span>
+
+                    <span class="active">
+                        03&nbsp; Documentación
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FORMULARIO -->
+        <form id="documentsForm">
+
+
+            <!-- =====================================
+                 CAR CUNDINAMARCA
+            ====================================== -->
+
+            <section class="authority-section" id="sectionCAR" style="display: none;">
+
+                <div class="authority-header">
+
+                    <div>
+                        <span class="authority-label">
+                            AUTORIDAD AMBIENTAL
+                        </span>
+
+                        <h2>
+                            CAR Cundinamarca
+                        </h2>
+                    </div>
+
+                    <span class="authority-tag">
+                        CAR
+                    </span>
+
+                </div>
+
+
+                <!-- DOCUMENTOS GENERALES -->
+                <div class="form-block">
+
+                    <div class="block-heading">
+
+                        <span class="block-number">
+                            01
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Documentos generales
+                            </h2>
+
+                            <p>
+                                Documentos administrativos requeridos
+                                para la presentación de la solicitud.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Formulario -->
+                    <div class="document-row">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">
+                                ↑
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Formulario Único Nacional
+                                </strong>
+
+                                <small>
+                                    Diligenciado y firmado por el solicitante.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <label class="upload-button">
+
+                            Adjuntar
+
+                            <input type="file" name="carFormulario" accept=".pdf,.jpg,.jpeg,.png">
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- Identificación -->
+                    <div class="document-row" id="carIdentificacionNatural">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">
+                                ↑
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Fotocopia de la cédula de ciudadanía
+                                </strong>
+
+                                <small>
+                                    Requerida para personas naturales.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <label class="upload-button">
+
+                            Adjuntar
+
+                            <input type="file" name="carCedulaNatural" accept=".pdf,.jpg,.jpeg,.png">
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="document-row" id="carIdentificacionJuridica">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">
+                                ↑
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Certificado de existencia y representación legal
+                                </strong>
+
+                                <small>
+                                    Expedido dentro del mes inmediatamente anterior.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <label class="upload-button">
+
+                            Adjuntar
+
+                            <input type="file" name="carCertificadoLegal" accept=".pdf">
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- Poder -->
+                    <div class="document-row">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">
+                                ↑
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Poder debidamente otorgado
+                                </strong>
+
+                                <small>
+                                    Requerido cuando se actúe mediante apoderado.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <label class="upload-button">
+
+                            Adjuntar
+
+                            <input type="file" name="carPoder" accept=".pdf,.jpg,.jpeg,.png">
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- Libertad y tradición -->
+                    <div class="document-row">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">
+                                ↑
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Certificado de libertad y tradición
+                                </strong>
+
+                                <small>
+                                    Expedido dentro del mes inmediatamente anterior,
+                                    cuando aplique.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <label class="upload-button">
+
+                            Adjuntar
+
+                            <input type="file" name="carLibertad" accept=".pdf">
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- Autorización -->
+                    <div class="document-row">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">
+                                ↑
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Autorización del propietario
+                                </strong>
+
+                                <small>
+                                    Cuando corresponda según la situación del predio.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <label class="upload-button">
+
+                            Adjuntar
+
+                            <input type="file" name="carAutorizacion" accept=".pdf,.jpg,.jpeg,.png">
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- RUT -->
+                    <div class="document-row">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">
+                                ↑
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Registro Único Tributario — RUT
+                                </strong>
+
+                                <small>
+                                    Documento tributario del solicitante.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <label class="upload-button">
+
+                            Adjuntar
+
+                            <input type="file" name="carRut" accept=".pdf">
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- Plano IGAC -->
+                    <div class="document-row">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">
+                                ↑
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Plano del Instituto Geográfico Agustín Codazzi
+                                </strong>
+
+                                <small>
+                                    Debe localizar la obra objeto de la solicitud.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <label class="upload-button">
+
+                            Adjuntar
+
+                            <input type="file" name="carPlanoIGAC" accept=".pdf,.jpg,.jpeg,.png">
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DOCUMENTOS TÉCNICOS -->
+                <div class="form-block">
+
+                    <div class="block-heading">
+
+                        <span class="block-number">
+                            02
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Documentos técnicos
+                            </h2>
+
+                            <p>
+                                Información técnica necesaria para evaluar
+                                las obras de ocupación del cauce.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="document-row">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">
+                                ↑
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Descripción y memoria de las obras
+                                </strong>
+
+                                <small>
+                                    Incluye cálculos y memorias hidrológicas,
+                                    hidráulicas y estructurales.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <label class="upload-button">
+
+                            Adjuntar
+
+                            <input type="file" name="carMemorias" accept=".pdf,.doc,.docx">
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="document-row">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">
+                                ↑
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Planos de ubicación y detalle de las obras
+                                </strong>
+
+                                <small>
+                                    Escala 1:10.000 o 1:25.000.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <label class="upload-button">
+
+                            Adjuntar
+
+                            <input type="file" name="carPlanos" accept=".pdf,.jpg,.jpeg,.png">
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="document-row">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">
+                                ↑
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Medidas de manejo ambiental
+                                </strong>
+
+                                <small>
+                                    Medidas para prevenir, mitigar o compensar
+                                    impactos ambientales.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <label class="upload-button">
+
+                            Adjuntar
+
+                            <input type="file" name="carManejo" accept=".pdf,.doc,.docx">
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="document-row">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">
+                                ↑
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Descripción explicativa del proyecto
+                                </strong>
+
+                                <small>
+                                    Localización, dimensión, costo estimado,
+                                    especificaciones y plan de operación.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <label class="upload-button">
+
+                            Adjuntar
+
+                            <input type="file" name="carDescripcion" accept=".pdf,.doc,.docx">
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="document-row">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">
+                                ↑
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Plano de localización de la fuente hídrica
+                                </strong>
+
+                                <small>
+                                    Localización de la fuente hídrica en el área
+                                    de influencia.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <label class="upload-button">
+
+                            Adjuntar
+
+                            <input type="file" name="carFuenteHidrica" accept=".pdf,.jpg,.jpeg,.png">
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="document-row">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">
+                                ↑
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Estudios, presupuesto y memorias de cálculo
+                                </strong>
+
+                                <small>
+                                    Documentación relacionada con las obras
+                                    a construir.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <label class="upload-button">
+
+                            Adjuntar
+
+                            <input type="file" name="carPresupuesto" accept=".pdf,.doc,.docx,.xlsx">
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="document-row">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">
+                                ↑
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Costo del proyecto
+                                </strong>
+
+                                <small>
+                                    Soporte o documento correspondiente al
+                                    costo estimado del proyecto.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <label class="upload-button">
+
+                            Adjuntar
+
+                            <input type="file" name="carCosto" accept=".pdf,.xlsx">
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PAGO -->
+                <div class="info-note">
+
+                    <span class="note-icon">i</span>
+
+                    <div>
+
+                        <strong>
+                            Pago de evaluación
+                        </strong>
+
+                        <p>
+                            El pago por el servicio de evaluación ambiental
+                            se realiza según la liquidación correspondiente
+                            de la CAR.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================
+                 SDA
+            ====================================== -->
+
+            <section class="authority-section" id="sectionSDA" style="display: none;">
+
+                <div class="authority-header">
+
+                    <div>
+
+                        <span class="authority-label">
+                            AUTORIDAD AMBIENTAL
+                        </span>
+
+                        <h2>
+                            Secretaría Distrital de Ambiente
+                        </h2>
+
+                    </div>
+
+                    <span class="authority-tag">
+                        SDA
+                    </span>
+
+                </div>
+
+
+                <!-- PASO PREVIO -->
+                <div class="info-note important">
+
+                    <span class="note-icon">i</span>
+
+                    <div>
+
+                        <strong>
+                            Verificación previa
+                        </strong>
+
+                        <p>
+                            Antes de continuar, debe verificarse si las obras
+                            se encuentran dentro de ZMPA, ronda, cauce o
+                            corredor ecológico de ronda.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- GENERALES -->
+                <div class="form-block">
+
+                    <div class="block-heading">
+
+                        <span class="block-number">
+                            01
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Documentos generales
+                            </h2>
+
+                            <p>
+                                Requisitos administrativos según el tipo
+                                de solicitante.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="document-row">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">
+                                ↑
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Formulario Único Nacional
+                                </strong>
+
+                                <small>
+                                    Solicitud de ocupación de cauces,
+                                    playas y lechos.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <label class="upload-button">
+
+                            Adjuntar
+
+                            <input type="file" name="sdaFormulario" accept=".pdf,.jpg,.jpeg,.png">
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="document-row" id="sdaCamara">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">
+                                ↑
+                            </span>
+
+                            <div>
+
+                                <strong id="sdaCamaraTitle">
+                                    Documento de propiedad
+                                </strong>
+
+                                <small id="sdaCamaraDescription">
+                                    Soporte correspondiente según el tipo de solicitante.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <label class="upload-button">
+
+                            Adjuntar
+
+                            <input type="file" name="sdaPropiedad" accept=".pdf,.jpg,.jpeg,.png">
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="document-row" id="sdaPersoneria" style="display: none;">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">
+                                ↑
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Documento de existencia y personería jurídica
+                                </strong>
+
+                                <small>
+                                    Para juntas de acción comunal u otros
+                                    organismos sin ánimo de lucro, si aplica.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <label class="upload-button">
+
+                            Adjuntar
+
+                            <input type="file" name="sdaPersoneria" accept=".pdf">
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="document-row" id="sdaPoder">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">
+                                ↑
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Poder
+                                </strong>
+
+                                <small>
+                                    Requerido cuando se actúe mediante apoderado.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <label class="upload-button">
+
+                            Adjuntar
+
+                            <input type="file" name="sdaPoder" accept=".pdf,.jpg,.jpeg,.png">
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TÉCNICOS -->
+                <div class="form-block">
+
+                    <div class="block-heading">
+
+                        <span class="block-number">
+                            02
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Documentos técnicos
+                            </h2>
+
+                            <p>
+                                Estudios, planos y soportes técnicos
+                                requeridos por la SDA.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="document-row">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">↑</span>
+
+                            <div>
+
+                                <strong>
+                                    Descripción del proyecto
+                                </strong>
+
+                                <small>
+                                    2 copias. Incluye nombre, objetivos,
+                                    justificación, actividades y coordenadas.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <label class="upload-button">
+                            Adjuntar
+
+                            <input type="file" name="sdaDescripcion" accept=".pdf,.doc,.docx">
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="document-row">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">↑</span>
+
+                            <div>
+
+                                <strong>
+                                    Planos topográficos
+                                </strong>
+
+                                <small>
+                                    Planos longitudinales y transversales
+                                    firmados por el profesional responsable.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <label class="upload-button">
+                            Adjuntar
+
+                            <input type="file" name="sdaTopograficos" accept=".pdf,.jpg,.jpeg,.png">
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="document-row">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">↑</span>
+
+                            <div>
+
+                                <strong>
+                                    Plano de localización de la fuente hídrica
+                                </strong>
+
+                                <small>
+                                    Puntos a intervenir y área de influencia
+                                    debidamente georreferenciados.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <label class="upload-button">
+                            Adjuntar
+
+                            <input type="file" name="sdaFuente" accept=".pdf,.jpg,.jpeg,.png">
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="document-row">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">↑</span>
+
+                            <div>
+
+                                <strong>
+                                    Planos y memorias de cálculo
+                                </strong>
+
+                                <small>
+                                    Cálculos estructurales e hidráulicos,
+                                    especificaciones técnicas y procesos constructivos.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <label class="upload-button">
+                            Adjuntar
+
+                            <input type="file" name="sdaCalculos" accept=".pdf">
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="document-row">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">↑</span>
+
+                            <div>
+
+                                <strong>
+                                    Medidas ambientales
+                                </strong>
+
+                                <small>
+                                    Medidas para agua, suelo, aire, paisaje,
+                                    flora y fauna.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <label class="upload-button">
+                            Adjuntar
+
+                            <input type="file" name="sdaMedidas" accept=".pdf,.doc,.docx">
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="document-row">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">↑</span>
+
+                            <div>
+
+                                <strong>
+                                    Compensaciones
+                                </strong>
+
+                                <small>
+                                    Matriz de áreas verdes y áreas a endurecer.
+                                    Aplica para obras de naturaleza pública.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <label class="upload-button">
+                            Adjuntar
+
+                            <input type="file" name="sdaCompensaciones" accept=".pdf,.xlsx,.doc,.docx">
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="document-row">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">↑</span>
+
+                            <div>
+
+                                <strong>
+                                    Acta de diseños paisajísticos aprobados
+                                </strong>
+
+                                <small>
+                                    Documento expedido por la Secretaría
+                                    Distrital de Ambiente.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <label class="upload-button">
+                            Adjuntar
+
+                            <input type="file" name="sdaPaisajismo" accept=".pdf">
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="document-row">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">↑</span>
+
+                            <div>
+
+                                <strong>
+                                    Condición especial — Humedales
+                                </strong>
+
+                                <small>
+                                    Diagnóstico de flora, fauna, agua y suelos
+                                    cuando aplique.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <label class="upload-button">
+                            Adjuntar
+
+                            <input type="file" name="sdaHumedales" accept=".pdf,.doc,.docx">
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PAGO Y RADICACIÓN -->
+                <div class="process-info">
+
+                    <div class="process-item">
+
+                        <span>01</span>
+
+                        <div>
+                            <strong>Pago</strong>
+
+                            <p>
+                                Realizar el pago de la evaluación
+                                correspondiente.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="process-item">
+
+                        <span>02</span>
+
+                        <div>
+                            <strong>Radicación</strong>
+
+                            <p>
+                                SuperCADE o Ventanilla Única de la
+                                Construcción — VUC.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="process-item">
+
+                        <span>03</span>
+
+                        <div>
+                            <strong>Visita técnica</strong>
+
+                            <p>
+                                La autoridad realizará la visita
+                                correspondiente.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="process-item">
+
+                        <span>04</span>
+
+                        <div>
+                            <strong>Resolución</strong>
+
+                            <p>
+                                Se emite la decisión sobre el permiso.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="info-note">
+
+                    <span class="note-icon">!</span>
+
+                    <div>
+
+                        <strong>
+                            Obligaciones posteriores
+                        </strong>
+
+                        <p>
+                            El ciudadano deberá cumplir las obligaciones
+                            establecidas en el acto administrativo o
+                            concepto técnico correspondiente.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================
+                 CORPOBOYACÁ
+            ====================================== -->
+
+            <section class="authority-section" id="sectionCorpoboyaca" style="display: none;">
+
+                <div class="authority-header">
+
+                    <div>
+
+                        <span class="authority-label">
+                            AUTORIDAD AMBIENTAL
+                        </span>
+
+                        <h2>
+                            Corpoboyacá
+                        </h2>
+
+                    </div>
+
+                    <span class="authority-tag">
+                        CORPOBOYACÁ
+                    </span>
+
+                </div>
+
+
+                <!-- IDENTIFICACIÓN -->
+                <div class="form-block">
+
+                    <div class="block-heading">
+
+                        <span class="block-number">
+                            01
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Documentos de identificación
+                            </h2>
+
+                            <p>
+                                Documentos necesarios para identificar
+                                al solicitante.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="document-row" id="corpCedula">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">↑</span>
+
+                            <div>
+
+                                <strong>
+                                    Cédula de ciudadanía
+                                </strong>
+
+                                <small>
+                                    Requerida para personas naturales.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <label class="upload-button">
+                            Adjuntar
+
+                            <input type="file" name="corpCedula" accept=".pdf,.jpg,.jpeg,.png">
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="document-row" id="corpExistencia">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">↑</span>
+
+                            <div>
+
+                                <strong>
+                                    Certificado de existencia y representación legal
+                                </strong>
+
+                                <small>
+                                    Requerido para personas jurídicas.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <label class="upload-button">
+                            Adjuntar
+
+                            <input type="file" name="corpExistencia" accept=".pdf">
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="document-row" id="corpRut">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">↑</span>
+
+                            <div>
+
+                                <strong>
+                                    Registro Único Tributario — RUT
+                                </strong>
+
+                                <small>
+                                    Requerido para personas jurídicas.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <label class="upload-button">
+                            Adjuntar
+
+                            <input type="file" name="corpRut" accept=".pdf">
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PREDIO -->
+                <div class="form-block">
+
+                    <div class="block-heading">
+
+                        <span class="block-number">
+                            02
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Derecho sobre el predio
+                            </h2>
+
+                            <p>
+                                Presenta el documento que acredite la
+                                propiedad, posesión o tenencia.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="document-row">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">↑</span>
+
+                            <div>
+
+                                <strong>
+                                    Certificado de tradición y libertad
+                                </strong>
+
+                                <small>
+                                    Expedición no superior a dos meses.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <label class="upload-button">
+                            Adjuntar
+
+                            <input type="file" name="corpTradicion" accept=".pdf">
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="document-row">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">↑</span>
+
+                            <div>
+
+                                <strong>
+                                    Declaración extrajuicio
+                                </strong>
+
+                                <small>
+                                    Cuando el solicitante sea poseedor,
+                                    si aplica.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <label class="upload-button">
+                            Adjuntar
+
+                            <input type="file" name="corpDeclaracion" accept=".pdf">
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="document-row">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">↑</span>
+
+                            <div>
+
+                                <strong>
+                                    Autorización del propietario y contrato de arrendamiento
+                                </strong>
+
+                                <small>
+                                    Cuando el solicitante sea arrendatario.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <label class="upload-button">
+                            Adjuntar
+
+                            <input type="file" name="corpArrendamiento" accept=".pdf">
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TÉCNICOS -->
+                <div class="form-block">
+
+                    <div class="block-heading">
+
+                        <span class="block-number">
+                            03
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Documentos técnicos
+                            </h2>
+
+                            <p>
+                                Información relacionada con la obra
+                                y su manejo ambiental.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="document-row">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">↑</span>
+
+                            <div>
+
+                                <strong>
+                                    Descripción de la obra
+                                </strong>
+
+                                <small>
+                                    Descripción de la obra objeto de
+                                    ocupación de cauce.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <label class="upload-button">
+                            Adjuntar
+
+                            <input type="file" name="corpDescripcion" accept=".pdf,.doc,.docx">
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="document-row">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">↑</span>
+
+                            <div>
+
+                                <strong>
+                                    Diseño de la obra
+                                </strong>
+
+                                <small>
+                                    Diseño correspondiente a la obra
+                                    objeto de ocupación.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <label class="upload-button">
+                            Adjuntar
+
+                            <input type="file" name="corpDiseno" accept=".pdf,.doc,.docx">
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="document-row">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">↑</span>
+
+                            <div>
+
+                                <strong>
+                                    Cronograma de actividades
+                                </strong>
+
+                                <small>
+                                    Cronograma expresado en semanas.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <label class="upload-button">
+                            Adjuntar
+
+                            <input type="file" name="corpCronograma" accept=".pdf,.doc,.docx,.xlsx">
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="document-row">
+
+                        <div class="document-info">
+
+                            <span class="document-icon">↑</span>
+
+                            <div>
+
+                                <strong>
+                                    Manejo ambiental durante la construcción
+                                </strong>
+
+                                <small>
+                                    Documento técnico sobre el manejo
+                                    ambiental durante la ejecución.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <label class="upload-button">
+                            Adjuntar
+
+                            <input type="file" name="corpManejoConstruccion" accept=".pdf,.doc,.docx">
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- BOTONES -->
+            <div class="form-actions">
+
+                <a href="form-proy.html" class="secondary-button">
+                    ← Volver
+                </a>
+
+
+                <button type="submit" class="primary-button">
+                    Continuar
+
+                    <span>
+                        →
+                    </span>
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <span>
+                EcoRegión SAS
+            </span>
+
+            <span>
+                Proyecto académico · 2026
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+    // =========================================
+    // DATOS DE SESIÓN
+    // =========================================
+
+    const authority = sessionStorage.getItem("autoridad") || "";
+    const applicant = sessionStorage.getItem("tipoSolicitante") || "";
+
+
+    // =========================================
+    // RESUMEN EN PANTALLA
+    // =========================================
+
+    const authoritySummary  = document.getElementById("authoritySummary");
+    const applicantSummary  = document.getElementById("applicantSummary");
+
+    if (authority) authoritySummary.textContent = authority;
+
+    if (applicant === "natural") {
+        applicantSummary.textContent = "Persona Natural";
+    } else if (applicant === "juridica") {
+        applicantSummary.textContent = "Persona Jurídica";
+    }
+
+
+    // =========================================
+    // MOSTRAR SECCIÓN SEGÚN AUTORIDAD
+    // =========================================
+
+    const sectionCAR         = document.getElementById("sectionCAR");
+    const sectionSDA         = document.getElementById("sectionSDA");
+    const sectionCorpoboyaca = document.getElementById("sectionCorpoboyaca");
+
+    sectionCAR.style.display = "none";
+    sectionSDA.style.display = "none";
+    sectionCorpoboyaca.style.display = "none";
+
+    if (authority === "CAR Cundinamarca") {
+        sectionCAR.style.display = "block";
+    } else if (authority === "SDA") {
+        sectionSDA.style.display = "block";
+    } else if (authority === "Corpoboyaca") {
+        sectionCorpoboyaca.style.display = "block";
+    }
+
+
+    // =========================================
+    // CAR — NATURAL / JURÍDICA
+    // =========================================
+
+    const carNatural  = document.getElementById("carIdentificacionNatural");
+    const carJuridica = document.getElementById("carIdentificacionJuridica");
+
+    if (applicant === "natural") {
+        carNatural.style.display = "flex";
+        carJuridica.style.display = "none";
+    } else if (applicant === "juridica") {
+        carNatural.style.display = "none";
+        carJuridica.style.display = "flex";
+    }
+
+
+    // =========================================
+    // SDA — PERSONERÍA
+    // =========================================
+
+    const sdaPersoneria = document.getElementById("sdaPersoneria");
+
+    if (applicant === "juridica") {
+        sdaPersoneria.style.display = "flex";
+    } else {
+        sdaPersoneria.style.display = "none";
+    }
+
+
+    // =========================================
+    // CORPOBOYACÁ — NATURAL / JURÍDICA
+    // =========================================
+
+    const corpCedula     = document.getElementById("corpCedula");
+    const corpExistencia = document.getElementById("corpExistencia");
+    const corpRut        = document.getElementById("corpRut");
+
+    if (applicant === "natural") {
+        corpCedula.style.display = "flex";
+        corpExistencia.style.display = "none";
+        corpRut.style.display = "none";
+    } else if (applicant === "juridica") {
+        corpCedula.style.display = "none";
+        corpExistencia.style.display = "flex";
+        corpRut.style.display = "flex";
+    }
+
+
+    // =========================================
+    // FEEDBACK VISUAL DE ARCHIVOS
+    // + GUARDAR SOLO EL NOMBRE
+    // =========================================
+
+    document.querySelectorAll('input[type="file"]').forEach(function (input) {
+
+        input.addEventListener("change", function () {
+
+            const row = input.closest(".document-row");
+            if (!row) return;
+
+            const symbol = row.querySelector(".document-icon");
+            const action = row.querySelector(".upload-button");
+            const info   = row.querySelector(".document-info > div");
+
+            const previo = row.querySelector(".file-name");
+            if (previo) previo.remove();
+
+            if (input.files && input.files.length > 0) {
+
+                const archivo = input.files[0];
+
+                row.classList.add("has-file");
+
+                if (symbol) symbol.textContent = "✓";
+
+                if (action) {
+                    const inputEl = action.querySelector('input[type="file"]');
+                    action.textContent = "Cambiar";
+                    if (inputEl) action.appendChild(inputEl);
+                }
+
+                const chip = document.createElement("span");
+                chip.className = "file-name";
+                chip.textContent = archivo.name;
+                if (info) info.appendChild(chip);
+
+                if (input.name) {
+                    sessionStorage.setItem(input.name + "_nombre", archivo.name);
+                }
+
+            } else {
+
+                row.classList.remove("has-file");
+
+                if (symbol) symbol.textContent = "↑";
+
+                if (action) {
+                    const inputEl = action.querySelector('input[type="file"]');
+                    action.textContent = "Adjuntar";
+                    if (inputEl) action.appendChild(inputEl);
+                }
+
+                if (input.name) {
+                    sessionStorage.removeItem(input.name + "_nombre");
+                }
+
+            }
+
+        });
+
+    });
+
+
+    // =========================================
+    // RESTAURAR ESTADO VISUAL DE ARCHIVOS
+    // =========================================
+
+    function restaurarArchivosVisuales() {
+
+        document.querySelectorAll('input[type="file"]').forEach(function (input) {
+
+            if (!input.name) return;
+
+            const nombreGuardado = sessionStorage.getItem(input.name + "_nombre");
+            if (!nombreGuardado) return;
+
+            const row = input.closest(".document-row");
+            if (!row) return;
+
+            const symbol = row.querySelector(".document-icon");
+            const action = row.querySelector(".upload-button");
+            const info   = row.querySelector(".document-info > div");
+
+            const previo = row.querySelector(".file-name");
+            if (previo) previo.remove();
+
+            row.classList.add("has-file");
+
+            if (symbol) symbol.textContent = "✓";
+
+            if (action) {
+                const inputEl = action.querySelector('input[type="file"]');
+                action.textContent = "Cambiar";
+                if (inputEl) action.appendChild(inputEl);
+            }
+
+            const chip = document.createElement("span");
+            chip.className = "file-name";
+            chip.textContent = nombreGuardado;
+            if (info) info.appendChild(chip);
+
+        });
+
+    }
+
+    restaurarArchivosVisuales();
+
+
+    // =========================================
+    // ENVÍO DEL FORMULARIO
+    // =========================================
+
+    const documentsForm = document.getElementById("documentsForm");
+
+    if (documentsForm) {
+        documentsForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Guardar el nombre de cada archivo (ya se guarda en change,
+            // pero por si acaso el usuario nunca cambió alguno)
+            document.querySelectorAll('input[type="file"]').forEach(function (input) {
+                if (input.files && input.files.length > 0 && input.name) {
+                    sessionStorage.setItem(input.name + "_nombre", input.files[0].name);
+                }
+            });
+
+            window.location.href = "form-resumen.html";
+        });
+    }
+
+    </script>
+
+</body> 
+
+</html>

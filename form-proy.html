@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EcoRegión | EcoTrámiteCo</title>
+
+    <link rel="icon" type="image/png" href="img/Logotipo.png">
+    <link rel="stylesheet" href="form-proy.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="navbar">
+        <div class="navbar-content">
+
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="EcoRegión">
+            </a>
+
+            <a href="form-user.html" class="back-home">
+                ← Volver
+            </a>
+
+        </div>
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="form-container">
+
+        <!-- INTRODUCCIÓN -->
+        <section class="form-intro">
+
+            <div class="intro-top">
+                <span class="eyebrow">INFORMACIÓN DEL PROYECTO</span>
+                <span class="step-counter">02 / 03</span>
+            </div>
+
+            <h1>
+                Información<br>
+                del proyecto.
+            </h1>
+
+            <p>
+                Ingresa la información técnica y geográfica del proyecto
+                necesaria para evaluar la ocupación del cauce.
+            </p>
+
+            <!-- PROGRESO -->
+            <div class="progress">
+
+                <div class="progress-line">
+                    <span class="progress-active"></span>
+                </div>
+
+                <div class="progress-labels">
+                    <span>01&nbsp; Información</span>
+                    <span class="active">02&nbsp; Proyecto</span>
+                    <span>03&nbsp; Documentación</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FORMULARIO -->
+        <form id="projectForm">
+
+
+            <!-- 01. LOCALIZACIÓN Y JURISDICCIÓN -->
+            <section class="form-block">
+
+                <div class="block-heading">
+
+                    <span class="block-number">01</span>
+
+                    <div>
+                        <h2>Localización y jurisdicción</h2>
+
+                        <p>
+                            Indica dónde se encuentra ubicado el proyecto
+                            y cuál es la autoridad ambiental competente.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="autoridad">
+                        Autoridad ambiental competente
+                        <span>*</span>
+                    </label>
+
+                    <select id="autoridad" name="autoridad" required>
+
+                        <option value="" selected disabled>
+                            Selecciona una autoridad
+                        </option>
+
+                        <option value="CAR Cundinamarca">
+                            CAR Cundinamarca
+                        </option>
+
+                        <option value="SDA">
+                            Secretaría Distrital de Ambiente — SDA
+                        </option>
+
+                        <option value="Corpoboyaca">
+                            Corpoboyacá
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="field-grid">
+
+                    <div class="field">
+
+                        <label for="departamento">
+                            Departamento
+                            <span>*</span>
+                        </label>
+
+                        <input type="text" id="departamento" name="departamento" placeholder="Ej. Cundinamarca"
+                            required>
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="municipio">
+                            Municipio / Localidad
+                            <span>*</span>
+                        </label>
+
+                        <input type="text" id="municipio" name="municipio" placeholder="Ej. Bogotá D.C." required>
+
+                    </div>
+
+                </div>
+
+
+                <div class="field-grid">
+
+                    <div class="field">
+
+                        <label for="vereda">
+                            Vereda / Corregimiento
+                        </label>
+
+                        <input type="text" id="vereda" name="vereda" placeholder="Escribe la vereda o corregimiento">
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="cuerpoAgua">
+                            Nombre del cuerpo de agua
+                            <span>*</span>
+                        </label>
+
+                        <input type="text" id="cuerpoAgua" name="cuerpoAgua" placeholder="Ej. Río Bogotá" required>
+
+                    </div>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="nombreProyecto">
+                        Nombre del predio / proyecto
+                        <span>*</span>
+                    </label>
+
+                    <input type="text" id="nombreProyecto" name="nombreProyecto"
+                        placeholder="Escribe el nombre del predio o proyecto" required>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- 02. IDENTIFICACIÓN DEL PREDIO -->
+            <section class="form-block">
+
+                <div class="block-heading">
+
+                    <span class="block-number">02</span>
+
+                    <div>
+                        <h2>Identificación del predio</h2>
+
+                        <p>
+                            Proporciona la información que permita
+                            identificar jurídicamente el predio.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="cedulaCatastral">
+                        Cédula catastral / Folio de matrícula
+                        <span>*</span>
+                    </label>
+
+                    <input type="text" id="cedulaCatastral" name="cedulaCatastral"
+                        placeholder="Número de identificación del predio" required>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="propietario">
+                        Propietario del predio
+                    </label>
+
+                    <input type="text" id="propietario" name="propietario"
+                        placeholder="Nombre completo del propietario">
+
+                    <small>
+                        Diligencia este campo si el propietario es diferente al solicitante.
+                    </small>
+
+                </div>
+
+
+                <!-- DOCUMENTO -->
+                                <!-- DOCUMENTOS -->
+                                <div class="upload-list">
+                                
+                                    <label class="upload-row" for="certificadoTradicion">
+                                
+                                        <div class="upload-symbol">↑</div>
+                                
+                                        <div class="upload-info">
+                                            <strong>Certificado de Libertad y Tradición</strong>
+                                            <span>Documento que acredita la propiedad del predio · PDF, JPG o PNG</span>
+                                        </div>
+                                
+                                        <span class="upload-action">Adjuntar</span>
+                                
+                                        <input type="file" id="certificadoTradicion" name="certificadoTradicion" accept=".pdf,.jpg,.jpeg,.png">
+                                
+                                    </label>
+                                
+                                
+                                    <label class="upload-row" for="autorizacionPropietario">
+                                
+                                        <div class="upload-symbol">↑</div>
+                                
+                                        <div class="upload-info">
+                                            <strong>Autorización del propietario</strong>
+                                            <span>Documento que autoriza la intervención, si aplica · PDF, JPG o PNG</span>
+                                        </div>
+                                
+                                        <span class="upload-action">Adjuntar</span>
+                                
+                                        <input type="file" id="autorizacionPropietario" name="autorizacionPropietario" accept=".pdf,.jpg,.jpeg,.png">
+                                
+                                    </label>
+                                
+                                </div>
+
+            </section>
+
+
+
+            <!-- 03. ESPECIFICACIONES TÉCNICAS -->
+            <section class="form-block">
+
+                <div class="block-heading">
+
+                    <span class="block-number">03</span>
+
+                    <div>
+                        <h2>Especificaciones técnicas</h2>
+
+                        <p>
+                            Describe las características principales
+                            de la ocupación del cauce.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="tipoOcupacion">
+                        Tipo de ocupación
+                        <span>*</span>
+                    </label>
+
+                    <select id="tipoOcupacion" name="tipoOcupacion" required>
+
+                        <option value="" selected disabled>
+                            Selecciona una opción
+                        </option>
+
+                        <option value="Permanente">
+                            Permanente
+                        </option>
+
+                        <option value="Transitoria">
+                            Transitoria
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="tiempoOcupacion">
+                        Tiempo de ocupación
+                    </label>
+
+                    <input type="text" id="tiempoOcupacion" name="tiempoOcupacion"
+                        placeholder="Ej. 6 meses, 2 años, 30 días">
+
+                    <small>
+                        Especialmente para ocupaciones transitorias.
+                    </small>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="tipoActividad">
+                        Tipo de actividad a realizar
+                        <span>*</span>
+                    </label>
+
+                    <textarea id="tipoActividad" name="tipoActividad"
+                        placeholder="Describe la actividad que se realizará..." required></textarea>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="obrasRonda">
+                        Obras que ocupan la ronda hídrica
+                    </label>
+
+                    <textarea id="obrasRonda" name="obrasRonda"
+                        placeholder="Describe las obras de protección, infraestructura vial u otras..."></textarea>
+
+                </div>
+
+
+                <!-- COORDENADAS -->
+                <div class="subheading">
+                    <span>Coordenadas geográficas</span>
+                </div>
+
+                <p class="field-description">
+                    Registra la ubicación del punto central de intervención.
+                    Utiliza el sistema WGS84 o MAGNA-SIRGAS.
+                </p>
+
+
+                <div class="field-grid">
+
+                    <div class="field">
+
+                        <label for="norte">
+                            Norte
+                            <span>*</span>
+                        </label>
+
+                        <input type="text" id="norte" name="norte" placeholder="Ej. 4.7110" required>
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="este">
+                            Este
+                            <span>*</span>
+                        </label>
+
+                        <input type="text" id="este" name="este" placeholder="Ej. -74.0721" required>
+
+                    </div>
+
+                </div>
+
+
+                <div class="field-grid three-columns">
+
+                    <div class="field">
+
+                        <label for="altitud">
+                            Altitud (msnm)
+                        </label>
+
+                        <input type="number" id="altitud" name="altitud" placeholder="Ej. 2600" step="any">
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="areaOcupacion">
+                            Área de ocupación (m²)
+                        </label>
+
+                        <input type="number" id="areaOcupacion" name="areaOcupacion" placeholder="Ej. 120" step="any"
+                            min="0">
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="longitudObra">
+                            Longitud de la obra (m)
+                        </label>
+
+                        <input type="number" id="longitudObra" name="longitudObra" placeholder="Ej. 25" step="any"
+                            min="0">
+
+                    </div>
+
+                </div>
+
+
+                <div class="field-grid">
+
+                    <div class="field">
+
+                        <label for="anchoObra">
+                            Ancho de la obra (m)
+                        </label>
+
+                        <input type="number" id="anchoObra" name="anchoObra" placeholder="Ej. 8" step="any" min="0">
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="alturaCauce">
+                            Altura sobre el cauce (m)
+                        </label>
+
+                        <input type="number" id="alturaCauce" name="alturaCauce" placeholder="Ej. 5" step="any" min="0">
+
+                    </div>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="cimentacion">
+                        Tipo de cimentación
+                    </label>
+
+                    <input type="text" id="cimentacion" name="cimentacion" placeholder="Ej. Pilotes, zapatas, losa...">
+
+                </div>
+
+            </section>
+
+
+
+            <!-- 04. HIDROLOGÍA E HIDRÁULICA -->
+            <section class="form-block">
+
+                <div class="block-heading">
+
+                    <span class="block-number">04</span>
+
+                    <div>
+                        <h2>Aspectos hidrológicos e hidráulicos</h2>
+
+                        <p>
+                            Registra los estudios y parámetros técnicos
+                            relacionados con el comportamiento del cauce.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="analisisHidrologico">
+                        Análisis hidrológico
+                    </label>
+
+                    <textarea id="analisisHidrologico" name="analisisHidrologico"
+                        placeholder="Describe o registra la información del análisis hidrológico..."></textarea>
+
+                    <small>
+                        Considera los periodos de retorno de 2,33; 10; 25; 50; 100 y 500 años.
+                    </small>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="analisisHidraulico">
+                        Análisis hidráulico
+                    </label>
+
+                    <textarea id="analisisHidraulico" name="analisisHidraulico"
+                        placeholder="Describe el comportamiento del flujo y los niveles de inundación..."></textarea>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="estudioSocavacion">
+                        Estudio de socavación
+                    </label>
+
+                    <textarea id="estudioSocavacion" name="estudioSocavacion"
+                        placeholder="Describe el análisis de erosión del lecho, si aplica..."></textarea>
+
+                    <small>
+                        Obligatorio para pasos subfluviales con profundidad menor a 5 metros, según el requisito
+                        indicado.
+                    </small>
+
+                </div>
+
+
+                <div class="field-grid">
+
+                    <div class="field">
+
+                        <label for="caudalDiseno">
+                            Caudal de diseño (m³/s)
+                        </label>
+
+                        <input type="number" id="caudalDiseno" name="caudalDiseno" placeholder="Ej. 25.5" step="any"
+                            min="0">
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="periodoRetorno">
+                            Periodo de retorno (años)
+                        </label>
+
+                        <select id="periodoRetorno" name="periodoRetorno">
+
+                            <option value="" selected disabled>
+                                Selecciona
+                            </option>
+
+                            <option value="2.33">2,33 años</option>
+                            <option value="10">10 años</option>
+                            <option value="25">25 años</option>
+                            <option value="50">50 años</option>
+                            <option value="100">100 años</option>
+                            <option value="500">500 años</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="name">
+                        NAME — Nivel de Aguas Máximas Extraordinarias
+                    </label>
+
+                    <input type="text" id="name" name="name" placeholder="Registra el nivel máximo de inundación">
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="seccionesCauce">
+                        Sección o secciones características del cauce
+                    </label>
+
+                    <textarea id="seccionesCauce" name="seccionesCauce"
+                        placeholder="Describe las secciones transversales del cauce..."></textarea>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="condicionesGeomorfologicas">
+                        Condiciones geomorfológicas
+                    </label>
+
+                    <textarea id="condicionesGeomorfologicas" name="condicionesGeomorfologicas"
+                        placeholder="Describe las condiciones geomorfológicas del sector..."></textarea>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- 05. DESCRIPCIÓN DEL PROYECTO -->
+            <section class="form-block">
+
+                <div class="block-heading">
+
+                    <span class="block-number">05</span>
+
+                    <div>
+                        <h2>Descripción del proyecto</h2>
+
+                        <p>
+                            Explica de manera clara el proyecto y la
+                            necesidad de realizar la ocupación del cauce.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="descripcionProyecto">
+                        Descripción detallada del proyecto
+                        <span>*</span>
+                    </label>
+
+                    <textarea id="descripcionProyecto" name="descripcionProyecto"
+                        placeholder="Describe el proyecto, las obras y las actividades que requieren la ocupación del cauce..."
+                        required></textarea>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="justificacion">
+                        Justificación técnica
+                        <span>*</span>
+                    </label>
+
+                    <textarea id="justificacion" name="justificacion"
+                        placeholder="Explica por qué es necesaria la ocupación del cauce..." required></textarea>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="objetivos">
+                        Objetivos del proyecto
+                    </label>
+
+                    <textarea id="objetivos" name="objetivos"
+                        placeholder="Describe los objetivos principales del proyecto..."></textarea>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="beneficios">
+                        Beneficios esperados
+                    </label>
+
+                    <textarea id="beneficios" name="beneficios"
+                        placeholder="Describe los beneficios esperados..."></textarea>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- 06. GESTIÓN AMBIENTAL -->
+            <section class="form-block">
+
+                <div class="block-heading">
+
+                    <span class="block-number">06</span>
+
+                    <div>
+                        <h2>Información de gestión ambiental</h2>
+
+                        <p>
+                            Describe las medidas previstas para prevenir,
+                            mitigar y gestionar los impactos ambientales.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="medidasManejo">
+                        Medidas de manejo ambiental
+                    </label>
+
+                    <textarea id="medidasManejo" name="medidasManejo"
+                        placeholder="Describe las acciones para prevenir, mitigar o compensar impactos..."></textarea>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="sistemaOcupacion">
+                        Sistema a emplear en la ocupación
+                    </label>
+
+                    <textarea id="sistemaOcupacion" name="sistemaOcupacion"
+                        placeholder="Describe los métodos que se emplearán para prevenir daños al cauce o a obras..."></textarea>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="planRiesgo">
+                        Plan de gestión del riesgo
+                    </label>
+
+                    <textarea id="planRiesgo" name="planRiesgo"
+                        placeholder="Identifica las amenazas naturales y describe el plan de contingencia..."></textarea>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="gestionResiduos">
+                        Gestión de residuos
+                    </label>
+
+                    <textarea id="gestionResiduos" name="gestionResiduos"
+                        placeholder="Describe el manejo de escombros y residuos peligrosos..."></textarea>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="cronograma">
+                        Cronograma de obras
+                    </label>
+
+                    <textarea id="cronograma" name="cronograma"
+                        placeholder="Indica las fechas de inicio y finalización de cada fase..."></textarea>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- BOTONES -->
+            <div class="form-actions">
+
+                <a href="form-user.html" class="secondary-button">
+                    ← Volver
+                </a>
+
+                <button type="submit" class="primary-button">
+                    Continuar
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </form>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <span>EcoRegión SAS</span>
+
+            <span>Proyecto académico · 2026</span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+<script>
+
+    // =====================================
+    // ELEMENTOS
+    // =====================================
+
+    const projectForm = document.getElementById("projectForm");
+
+
+    // =====================================
+    // AUTORRELLENO DE CAMPOS AL CARGAR
+    // =====================================
+
+    function restaurarCampos() {
+
+        document.querySelectorAll("input, select, textarea").forEach(function (el) {
+
+            if (!el.name) return;
+            if (el.type === "file") return;
+
+            const valor = sessionStorage.getItem(el.name);
+            if (valor === null) return;
+
+            if (el.type === "checkbox") {
+                el.checked = (valor === "true");
+            } else {
+                el.value = valor;
+            }
+
+        });
+
+        restaurarArchivosVisuales();
+
+    }
+
+
+    // =====================================
+    // RESTAURAR ESTADO VISUAL DE ARCHIVOS
+    // (solo el nombre, el archivo real no se puede guardar)
+    // =====================================
+
+    function restaurarArchivosVisuales() {
+
+        document.querySelectorAll('input[type="file"]').forEach(function (input) {
+
+            if (!input.name) return;
+
+            const nombreGuardado = sessionStorage.getItem(input.name + "_nombre");
+            if (!nombreGuardado) return;
+
+            const row = input.closest(".upload-row");
+            if (!row) return;
+
+            const symbol = row.querySelector(".upload-symbol");
+            const action = row.querySelector(".upload-action");
+            const info   = row.querySelector(".upload-info");
+
+            const previo = info.querySelector(".file-name");
+            if (previo) previo.remove();
+
+            row.classList.add("has-file");
+            if (symbol) symbol.textContent = "✓";
+            if (action) action.textContent = "Cambiar";
+
+            const chip = document.createElement("span");
+            chip.className = "file-name";
+            chip.textContent = nombreGuardado;
+            info.appendChild(chip);
+
+        });
+
+    }
+
+
+    // =====================================
+    // AUTOGUARDADO
+    // =====================================
+
+    function guardarCampo(event) {
+
+        const el = event.target;
+        if (!el.name) return;
+        if (el.type === "file") return;
+
+        if (el.type === "checkbox") {
+            sessionStorage.setItem(el.name, el.checked);
+        } else {
+            sessionStorage.setItem(el.name, el.value);
+        }
+
+    }
+
+    document.querySelectorAll("input, select, textarea").forEach(function (el) {
+
+        if (el.type === "file") return;
+
+        el.addEventListener("input", guardarCampo);
+        el.addEventListener("change", guardarCampo);
+        el.addEventListener("blur", guardarCampo);
+
+    });
+
+
+    // =====================================
+    // VALIDACIÓN SUAVE
+    // =====================================
+
+    function validarFormulario() {
+
+        let valido = true;
+        let primeroInvalido = null;
+
+        document.querySelectorAll("[required]").forEach(function (el) {
+
+            el.style.borderColor = "";
+
+            let vacio = false;
+
+            if (el.type === "checkbox") {
+                vacio = !el.checked;
+            } else if (el.type === "file") {
+                vacio = false;
+            } else {
+                vacio = (el.value.trim() === "");
+            }
+
+            if (vacio) {
+                el.style.borderColor = "#c65a5a";
+                valido = false;
+                if (!primeroInvalido) primeroInvalido = el;
+            }
+
+        });
+
+        if (!valido && primeroInvalido) {
+            primeroInvalido.scrollIntoView({ behavior: "smooth", block: "center" });
+            primeroInvalido.focus();
+        }
+
+        return valido;
+
+    }
+
+    document.querySelectorAll("[required]").forEach(function (el) {
+
+        el.addEventListener("input", function () {
+            el.style.borderColor = "";
+        });
+
+        el.addEventListener("change", function () {
+            el.style.borderColor = "";
+        });
+
+    });
+
+
+    // =====================================
+    // ENVÍO DEL FORMULARIO
+    // =====================================
+
+    projectForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        if (!validarFormulario()) {
+            return;
+        }
+
+        const datos = new FormData(projectForm);
+
+        datos.forEach(function (valor, nombre) {
+            if (typeof valor === "string") {
+                sessionStorage.setItem(nombre, valor);
+            }
+        });
+
+        window.location.href = "form-doc.html";
+
+    });
+
+
+    // =====================================
+    // FEEDBACK VISUAL DE ARCHIVOS
+    // + GUARDAR SOLO EL NOMBRE
+    // =====================================
+
+    document.querySelectorAll('input[type="file"]').forEach(function (input) {
+
+        input.addEventListener("change", function () {
+
+            const row = input.closest(".upload-row");
+            if (!row) return;
+
+            const symbol = row.querySelector(".upload-symbol");
+            const action = row.querySelector(".upload-action");
+            const info   = row.querySelector(".upload-info");
+
+            const previo = info.querySelector(".file-name");
+            if (previo) previo.remove();
+
+            if (input.files && input.files.length > 0) {
+
+                const archivo = input.files[0];
+
+                row.classList.add("has-file");
+                if (symbol) symbol.textContent = "✓";
+                if (action) action.textContent = "Cambiar";
+
+                const chip = document.createElement("span");
+                chip.className = "file-name";
+                chip.textContent = archivo.name;
+                info.appendChild(chip);
+
+                if (input.name) {
+                    sessionStorage.setItem(input.name + "_nombre", archivo.name);
+                }
+
+            } else {
+
+                row.classList.remove("has-file");
+                if (symbol) symbol.textContent = "↑";
+                if (action) action.textContent = "Adjuntar";
+
+                if (input.name) {
+                    sessionStorage.removeItem(input.name + "_nombre");
+                }
+
+            }
+
+        });
+
+    });
+
+
+    // =====================================
+    // INICIALIZAR
+    // =====================================
+
+    restaurarCampos();
+
+</script>
+
+</body>
+
+</html>
